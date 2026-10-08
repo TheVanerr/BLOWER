@@ -424,6 +424,111 @@ details.card[open]>summary .chev{transform:rotate(180deg)}
 .schleg .hint{margin-left:auto;display:flex;align-items:center;gap:6px}
 .schleg .hint svg{width:14px;height:14px}
 
+
+/* ---------- guide ---------- */
+.guide{display:grid;grid-template-columns:236px minmax(0,1fr);gap:24px;align-items:start}
+.toc{position:sticky;top:16px;padding:10px;max-height:calc(100vh - 32px);overflow:auto}
+.toc .th{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 10px 8px}
+.toc a{display:flex;gap:9px;align-items:center;padding:7px 10px;border-radius:9px;color:var(--text-2);text-decoration:none;font-size:12.5px;line-height:1.3;transition:background .15s}
+.toc a svg{width:15px;height:15px;flex:none}
+.toc a:hover{background:var(--surface-2);color:var(--text)}
+.toc a.on{background:var(--accent-soft);color:var(--text);font-weight:600}
+.toc a.on svg{color:var(--accent)}
+.gsec{padding:26px 30px;margin-bottom:16px;scroll-margin-top:16px}
+.gsec h2{font-size:21px;margin:0 0 14px;display:flex;align-items:center;gap:12px;letter-spacing:-.02em;line-height:1.25}
+.gsec h2 .ico{width:38px;height:38px;border-radius:11px}
+.gsec h2 .no{font-size:12px;font-weight:800;color:var(--accent);margin-left:auto;background:var(--accent-soft);border-radius:99px;padding:3px 10px}
+.gsec h3{font-size:15.5px;margin:22px 0 6px;letter-spacing:-.01em}
+.gsec p,.gsec li{color:var(--text-2);font-size:14.5px;line-height:1.72}
+.gsec p{margin:0 0 12px;max-width:820px}
+.gsec ul{padding-left:20px;margin:6px 0 12px;max-width:820px}
+.gsec li{margin:4px 0}
+.gsec b{color:var(--text)}
+.gsec .fx{margin:10px 0 14px;white-space:pre-wrap;word-break:break-word}
+.gsec ul.tldr,.gsec ul.check,.gsec ul.bad{list-style:none;padding:0;display:grid;gap:8px;max-width:none}
+.gsec ul.tldr{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:1100px){.gsec ul.tldr{grid-template-columns:minmax(0,1fr)}}
+.gsec ul.tldr li,.gsec ul.check li,.gsec ul.bad li{background:var(--surface-2);border-radius:12px;padding:11px 14px 11px 42px;position:relative;margin:0}
+.gsec ul.tldr li::before{content:"";position:absolute;left:15px;top:17px;width:11px;height:11px;border-radius:50%;background:var(--accent)}
+.gsec ul.check li::before{content:"";position:absolute;left:15px;top:14px;width:7px;height:12px;border:solid var(--good);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.gsec ul.bad li{background:var(--crit-soft)}
+.gsec ul.bad li::before{content:"×";position:absolute;left:15px;top:8px;font-weight:800;font-size:18px;color:var(--crit)}
+.co{padding:13px 16px;border-radius:12px;margin:14px 0;font-size:14px;line-height:1.65;color:var(--text);border:1px solid transparent;max-width:860px}
+.co.tip{background:var(--good-soft);border-color:color-mix(in srgb,var(--good) 25%,transparent)}
+.co.warn{background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 25%,transparent)}
+.co.info{background:var(--info-soft);border-color:color-mix(in srgb,var(--accent) 22%,transparent)}
+.kv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 16px}
+@media (max-width:900px){.kv{grid-template-columns:minmax(0,1fr)}}
+.kv div{background:var(--surface-2);border-radius:12px;padding:14px 16px}
+.kv>div>b{display:block;font-size:14.5px;margin-bottom:5px;color:var(--text)}
+.kv span b{color:var(--text)}
+.kv span{font-size:13px;color:var(--text-2);line-height:1.55}
+.gfig{margin:16px 0 18px;padding:16px;border-radius:14px;background:var(--surface-2);max-width:860px}
+.gfig svg{width:100%;height:auto;display:block}
+.gfig figcaption{font-size:12.5px;color:var(--text-2);margin-top:10px;text-align:center}
+.gfig text{font-family:Inter,system-ui,sans-serif}
+.sens{font-size:12.5px}
+.sens td{vertical-align:top}
+.sens td.n b{display:block;font-size:13px}
+.sens td.n small{display:block;font-size:11px;color:var(--muted);font-weight:600}
+.sens td.n small.up{color:var(--accent)}.sens td.n small.dn{color:var(--heat)}
+.sens tr.base td{background:var(--accent-soft);font-weight:600}
+.sens .crit{color:var(--crit)}
+.gnote{font-size:12px;color:var(--muted);margin-top:8px}
+.example{display:grid;gap:4px}
+.example p{max-width:860px}
+@media (max-width:1100px){.guide{grid-template-columns:minmax(0,1fr)}.toc{display:none}.gsec{padding:20px 18px}}
+
+
+/* ---------- finder ---------- */
+.find{display:grid;grid-template-columns:330px minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:1100px){.find{grid-template-columns:minmax(0,1fr)}}
+@media (min-width:1101px){.fin{position:sticky;top:14px}}
+.fin .card{padding:16px}
+.fin .grid2{margin-top:6px}
+.fin .area{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--accent-soft);border-radius:11px;padding:10px 12px;margin-top:12px}
+.fin .area span{font-size:12px;color:var(--text-2)}
+.fin .area b{font-size:18px;font-variant-numeric:tabular-nums}
+.fin .note{font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.5}
+.fsum{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.fsum .card{padding:12px 16px;display:flex;align-items:center;gap:12px;flex:1;min-width:150px}
+.fsum b{font-size:22px;font-weight:800;display:block;font-variant-numeric:tabular-nums;line-height:1.1}
+.fsum span{font-size:12px;color:var(--muted)}
+.pod{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:18px}
+@media (max-width:1300px){.pod{grid-template-columns:minmax(0,1fr)}}
+.pcard3{overflow:hidden;display:flex;flex-direction:column;position:relative}
+.pcard3.first{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft),var(--shadow)}
+.pcard3 .stage{height:150px;border:0;border-radius:0;border-bottom:1px solid var(--border)}
+.pcard3 .rank{position:absolute;left:12px;top:12px;z-index:2;background:var(--accent);color:#fff;font-weight:800;font-size:12px;padding:4px 10px;border-radius:99px}
+.pcard3 .pb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pcard3 .nm{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.pcard3 .nm b{font-size:18px;letter-spacing:-.01em}
+.pcard3 .sc{display:flex;align-items:center;gap:10px}
+.pcard3 .sc .num{font-size:26px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pcard3 .sc .num small{font-size:12px;color:var(--muted);font-weight:600}
+.sbar{height:7px;flex:1;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.sbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--s3))}
+.pcard3 .mg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.pcard3 .mg div{background:var(--surface-2);border-radius:9px;padding:7px 9px;font-size:11px;color:var(--muted)}
+.pcard3 .mg b{display:block;color:var(--text);font-size:14px;font-variant-numeric:tabular-nums}
+.pcard3 .tags{display:flex;gap:6px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:0;background:var(--accent);color:#fff;font:inherit;font-weight:650;font-size:13px;padding:9px 14px;border-radius:10px;cursor:pointer}
+.btn:hover{filter:brightness(1.07)}
+.btn.sm{padding:6px 10px;font-size:12px;border-radius:8px}
+.btn.ghost2{background:var(--surface-2);color:var(--text);border:1px solid var(--border)}
+.pcard3 .btn{margin-top:auto}
+.ftable td{vertical-align:middle;padding:8px 9px;white-space:nowrap}
+.ftable th{padding:9px}
+.ftable .tthumb{width:34px;height:26px;margin-right:8px}
+.ftable .ub{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.ftable .ub .sbar{width:60px;flex:none}
+.ftable .ub .sbar i.w{background:var(--warn)}.ftable .ub .sbar i.g{background:var(--good)}.ftable .ub .sbar i.c{background:var(--crit)}
+.fnone{padding:22px;display:flex;gap:14px;align-items:flex-start;background:var(--crit-soft);border-color:color-mix(in srgb,var(--crit) 25%,transparent)}
+.fbad summary{padding:14px 16px}
+.fbad .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;padding:0 16px 16px}
+.fbad .list div{background:var(--surface-2);border-radius:10px;padding:8px 10px;font-size:12.5px;display:flex;justify-content:space-between;gap:8px}
+.fbad .list div span{color:var(--muted)}
+
 /* ---------- mobile ---------- */
 @media (max-width:900px){
   .app{grid-template-columns:minmax(0,1fr)}
@@ -508,6 +613,15 @@ details.card[open]>summary .chev{transform:rotate(180deg)}
       </div>
     </section>
 
+    <!-- ================= FINDER ================= -->
+    <section class="view" id="v-find">
+      <div class="pagehead"><div><h1 data-t="fT"></h1><p data-t="fS"></p></div></div>
+      <div class="find">
+        <div class="fin" id="fIn"></div>
+        <div class="fres" id="fRes"></div>
+      </div>
+    </section>
+
     <!-- ================= SCAN ================= -->
     <section class="view" id="v-scan">
       <div class="pagehead"><div><h1 data-t="scanT"></h1><p data-t="scanS"></p></div></div>
@@ -548,6 +662,12 @@ details.card[open]>summary .chev{transform:rotate(180deg)}
       <div class="mgrid" id="mgrid"></div>
       <div class="card limits"><div class="chd" style="padding:0"><span class="ico warn"><svg class="i" viewBox="0 0 24 24" data-icon="alert"></svg></span><h3 data-t="limT"></h3></div><ul id="limits"></ul></div>
     </section>
+    <!-- ================= GUIDE ================= -->
+    <section class="view" id="v-guide">
+      <div class="pagehead"><div><h1 data-t="gT"></h1><p data-t="gS"></p></div><span class="badge" id="gRead"></span></div>
+      <div class="guide"><nav class="toc card" id="gToc"></nav><div id="gBody"></div></div>
+    </section>
+
     <!-- ================= ABOUT ================= -->
     <section class="view" id="v-about">
       <div class="card abhero" id="abHero"></div>
@@ -857,6 +977,8 @@ const ICON={
  target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
  sigma:'<path d="M18 7V4H6l6 8-6 8h12v-3"/>',
  chev:'<path d="m6 9 6 6 6-6"/>',
+ find:'<circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8v6"/>',
+ book:'<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/>',
  about:'<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>',
  globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/>'
 };
@@ -1173,6 +1295,53 @@ Object.assign(I18N.de,{flowT:'Anlagenschema',tgtL:'Ziel',tgtShort:'Soll',tempSca
 Object.assign(I18N.tr,{serPhoto:'Seri fotoğrafı · TS',vAlt:'Yan görünüm'});
 Object.assign(I18N.en,{serPhoto:'Series photo · TS',vAlt:'Side view'});
 Object.assign(I18N.de,{serPhoto:'Serienfoto · TS',vAlt:'Seitenansicht'});
+
+Object.assign(I18N.tr,{nav_guide:'Rehber',gT:'Blower ve air knife rehberi',gS:'Konuyu baştan sona, basit bir dille',toc:'İçindekiler',readTime:'≈ {n} dk okuma',
+ g_impeller:'Çark',g_channel:'Yan kanal',g_in:'Giriş',g_out:'Çıkış',g_strip:'Ayırıcı',g_spiral:'Hava, çark bir tur dönerken kanatlarla kanal arasında onlarca kez dolaşır ve her seferinde basınç kazanır.',
+ g_flow:'Debi',g_press:'Basınç',g_bc:'Blower eğrisi',g_narrow:'Dar yarık',g_wide:'Geniş yarık',g_pmax:'Motor sınırı',g_curveCap:'Blower eğrisi sabittir; yarık değiştikçe sistem eğrisi ve dolayısıyla çalışma noktası değişir (temsili çizim).',
+ g_plenum:'Plenum',g_gap:'Yarık b',g_core:'Çekirdek ≈ 5–6·b',g_spread:'Jet yayılır, hız düşer',g_angle:'15–45°',g_dist:'Mesafe x',g_water:'Su filmi',g_dry:'Kuru yüzey',g_dir:'Ürün hareketi',g_knifeCap:'Jet ürüne karşı açılı vurur ve suyu geriye sıyırır (temsili çizim).',
+ s_change:'Değişiklik',s_base:'Mevcut ayar',v_gapUp:'Yarık aralığı +%20',v_gapDn:'Yarık aralığı −%20',v_len:'Yarık uzunluğu +%20',v_n:'Bir knife daha',v_hot:'Isıtıcı hedefi +50 °C',v_d2:'Sıcak hortum çapı −%25',v_l2:'Sıcak hortum 2 kat uzun',v_x:'Hedef mesafesi 2 kat',v_f:'Frekans {f} Hz',
+ s_note:'Her satırda yalnızca bir ayar değiştirilmiştir; diğer tüm değerler hesaplama sayfasındaki gibidir. Küçük yazılar mevcut ayara göre değişimi gösterir.',
+ ex_none:'Şu anki ayarlarla geçerli bir çalışma noktası yok; önce hesaplama sayfasındaki uyarılara bakın.',
+ ex_tpl:'<p><b>{m}</b> blowerınız {f} Hz’de ortamdan saatte <b>{qin} m³</b> hava emiyor (= {qn} Nm³/h). Bu havayı hattan geçirmek için <b>{pB} mbar</b> basınç üretiyor; bu basıncın <b>%{pkp}</b>’i ({pk} mbar) yarıkta harcanıyor. İyi bir tasarımda basıncın çoğu yarıkta kalmalıdır, çünkü hızı yaratan odur.</p><p>Hava blowerdan yaklaşık <b>{tb} °C</b> çıkıyor (sıkıştırma ısısı). Isıtıcı <b>{preq} kW</b> harcayarak onu <b>{th} °C</b>’ye çıkarıyor ve knife’a <b>{tk} °C</b> ulaşıyor. Isınan hava genleştiği için yarıktan saatte <b>{qhot} m³</b> hava çıkıyor.</p><p>Yarıktan çıkış hızı <b>{vj} m/s</b>. Jet {x} mm ilerideki hedefe ulaştığında hız yaklaşık <b>{vx} m/s</b>’ye, sıcaklık <b>{tx} °C</b>’ye iniyor. Motor sınırının <b>%{util}</b>’i kullanılıyor.</p>'});
+Object.assign(I18N.en,{nav_guide:'Guide',gT:'Blower & air knife guide',gS:'The whole topic, in plain words',toc:'Contents',readTime:'≈ {n} min read',
+ g_impeller:'Impeller',g_channel:'Side channel',g_in:'Inlet',g_out:'Outlet',g_strip:'Stripper',g_spiral:'During one revolution the air circulates dozens of times between blades and channel, gaining pressure each time.',
+ g_flow:'Flow',g_press:'Pressure',g_bc:'Blower curve',g_narrow:'Narrow slot',g_wide:'Wide slot',g_pmax:'Motor limit',g_curveCap:'The blower curve is fixed; changing the slot changes the system curve and thus the operating point (illustration).',
+ g_plenum:'Plenum',g_gap:'Slot b',g_core:'Core ≈ 5–6·b',g_spread:'Jet spreads, velocity drops',g_angle:'15–45°',g_dist:'Distance x',g_water:'Water film',g_dry:'Dry surface',g_dir:'Product motion',g_knifeCap:'The jet hits the product at an angle against its motion and scrapes the water back (illustration).',
+ s_change:'Change',s_base:'Current setting',v_gapUp:'Slot gap +20%',v_gapDn:'Slot gap −20%',v_len:'Slot length +20%',v_n:'One more knife',v_hot:'Heater target +50 °C',v_d2:'Hot hose diameter −25%',v_l2:'Hot hose twice as long',v_x:'Target distance ×2',v_f:'Frequency {f} Hz',
+ s_note:'Only one setting is changed per row; everything else is as on the calculation page. Small figures show the change versus the current setting.',
+ ex_none:'There is no valid operating point with the current settings; check the warnings on the calculation page first.',
+ ex_tpl:'<p>Your <b>{m}</b> blower at {f} Hz draws <b>{qin} m³</b> of ambient air per hour (= {qn} Nm³/h). To push it through the line it builds up <b>{pB} mbar</b>; <b>{pkp}%</b> of this ({pk} mbar) is used at the slot. In a good design most of the pressure is used at the slot, because that is what creates velocity.</p><p>The air leaves the blower at about <b>{tb} °C</b> (heat of compression). The heater uses <b>{preq} kW</b> to bring it to <b>{th} °C</b>, and it reaches the knife at <b>{tk} °C</b>. Because the hot air has expanded, <b>{qhot} m³</b> per hour leave the slot.</p><p>Exit velocity is <b>{vj} m/s</b>. When the jet reaches the target {x} mm away, velocity has dropped to about <b>{vx} m/s</b> and temperature to <b>{tx} °C</b>. <b>{util}%</b> of the motor limit is used.</p>'});
+Object.assign(I18N.de,{nav_guide:'Leitfaden',gT:'Leitfaden Gebläse & Luftmesser',gS:'Das ganze Thema, einfach erklärt',toc:'Inhalt',readTime:'≈ {n} Min. Lesezeit',
+ g_impeller:'Laufrad',g_channel:'Seitenkanal',g_in:'Eintritt',g_out:'Austritt',g_strip:'Unterbrecher',g_spiral:'Während einer Umdrehung zirkuliert die Luft dutzende Male zwischen Schaufeln und Kanal und gewinnt jedes Mal Druck.',
+ g_flow:'Volumenstrom',g_press:'Druck',g_bc:'Gebläsekennlinie',g_narrow:'Schmaler Schlitz',g_wide:'Breiter Schlitz',g_pmax:'Motorgrenze',g_curveCap:'Die Gebläsekennlinie ist fest; ändert man den Schlitz, ändern sich Anlagenkennlinie und Betriebspunkt (schematisch).',
+ g_plenum:'Plenum',g_gap:'Schlitz b',g_core:'Kern ≈ 5–6·b',g_spread:'Strahl weitet sich, Geschwindigkeit sinkt',g_angle:'15–45°',g_dist:'Abstand x',g_water:'Wasserfilm',g_dry:'Trockene Fläche',g_dir:'Produktbewegung',g_knifeCap:'Der Strahl trifft schräg gegen die Laufrichtung und streift das Wasser nach hinten ab (schematisch).',
+ s_change:'Änderung',s_base:'Aktuelle Einstellung',v_gapUp:'Schlitzbreite +20 %',v_gapDn:'Schlitzbreite −20 %',v_len:'Schlitzlänge +20 %',v_n:'Ein Messer mehr',v_hot:'Heizungssoll +50 °C',v_d2:'Heißschlauch-Ø −25 %',v_l2:'Heißschlauch doppelt so lang',v_x:'Zielabstand ×2',v_f:'Frequenz {f} Hz',
+ s_note:'Pro Zeile wird nur eine Einstellung geändert; alles andere wie auf der Berechnungsseite. Kleine Zahlen zeigen die Änderung gegenüber der aktuellen Einstellung.',
+ ex_none:'Mit den aktuellen Einstellungen gibt es keinen gültigen Betriebspunkt; prüfen Sie zuerst die Warnungen auf der Berechnungsseite.',
+ ex_tpl:'<p>Ihr Gebläse <b>{m}</b> saugt bei {f} Hz stündlich <b>{qin} m³</b> Umgebungsluft an (= {qn} Nm³/h). Um sie durch die Leitung zu drücken, baut es <b>{pB} mbar</b> auf; <b>{pkp} %</b> davon ({pk} mbar) werden am Schlitz genutzt. Bei guter Auslegung bleibt der größte Teil des Drucks am Schlitz, denn dort entsteht die Geschwindigkeit.</p><p>Die Luft verlässt das Gebläse mit etwa <b>{tb} °C</b> (Verdichtungswärme). Die Heizung bringt sie mit <b>{preq} kW</b> auf <b>{th} °C</b>, am Messer kommen <b>{tk} °C</b> an. Da sich die heiße Luft ausdehnt, treten stündlich <b>{qhot} m³</b> aus dem Schlitz.</p><p>Die Austrittsgeschwindigkeit beträgt <b>{vj} m/s</b>. Am Ziel in {x} mm Abstand sind es noch etwa <b>{vx} m/s</b> und <b>{tx} °C</b>. <b>{util} %</b> der Motorgrenze werden genutzt.</p>'});
+
+Object.assign(I18N.tr,{nav_find:'Blower seçici',fT:'Blower seçici',fS:'Air knife ve ısıtıcı özelliklerinizi girin; katalogdaki tüm blowerlar hesaplanıp size en uygun olanlar sıralansın.',
+ fIn:'İstediğiniz özellikler',fUse:'Hesaplama sayfasındaki değerleri al',fNote:'Hortum, ortam, Cd ve ısıtıcı basınç kaybı hesaplama sayfasındaki değerlerden alınır. Tüm blowerlar 50 Hz’de hesaplanır.',fSer:'Seriler',fArea:'Toplam yarık alanı',
+ fsN:'Taranan model',fsOk:'Uygun',fsOver:'Motor sınırı aşılıyor',fsOut:'Katalog dışı',fTop:'En uygun blowerlar',fAll:'Tüm uygun modeller',fScore:'Skor',
+ fScoreH:'Önce ısıtıcınızın hedef sıcaklığa yetiştiği modeller gelir. Skor = hedefteki hız %45 · motor payı %25 · ısıtıcı yeterliliği %20 · enerji (küçük motor) %10. Motor sınırını aşan veya katalog aralığı dışında kalan modeller elenir.',
+ fOpen:'Hesaplamada aç',fSort:'Sırala',sortScore:'Skor',sortVx:'Hedefte hız',sortQ:'Debi',sortKw:'En küçük motor',fBad:'Uygun olmayan modeller ({n})',rOver:'Motor sınırı aşılıyor (%{u})',rOut:'Katalog aralığı dışında',
+ fNone:'<b>Hiçbir model uygun değil.</b> Toplam yarık alanı ({a} mm²) bu katalogdaki blowerlar için çok küçük. Yarığı uzatın veya genişletin ya da knife sayısını artırın.',
+ heatOk:'Isıtıcı yeterli',heatLow:'Isıtıcı yetersiz → {t} °C',rankN:'#{n}',best:'En iyi seçim'});
+Object.assign(I18N.en,{nav_find:'Blower finder',fT:'Blower finder',fS:'Enter your air knife and heater data; every catalog blower is calculated and the best matches are ranked for you.',
+ fIn:'Your requirements',fUse:'Use values from calculation page',fNote:'Hoses, ambient, Cd and heater pressure drop are taken from the calculation page. All blowers are calculated at 50 Hz.',fSer:'Series',fArea:'Total slot area',
+ fsN:'Models scanned',fsOk:'Suitable',fsOver:'Exceed motor limit',fsOut:'Out of range',fTop:'Best matches',fAll:'All suitable models',fScore:'Score',
+ fScoreH:'Models your heater can bring to the target temperature come first. Score = velocity at target 45% · motor margin 25% · heater adequacy 20% · energy (smaller motor) 10%. Models exceeding the motor limit or outside the catalog range are excluded.',
+ fOpen:'Open in calculation',fSort:'Sort',sortScore:'Score',sortVx:'Target velocity',sortQ:'Flow',sortKw:'Smallest motor',fBad:'Unsuitable models ({n})',rOver:'Exceeds motor limit ({u}%)',rOut:'Outside catalog range',
+ fNone:'<b>No model is suitable.</b> The total slot area ({a} mm²) is too small for the blowers in this catalog. Make the slot longer or wider, or add knives.',
+ heatOk:'Heater sufficient',heatLow:'Heater too small → {t} °C',rankN:'#{n}',best:'Best choice'});
+Object.assign(I18N.de,{nav_find:'Gebläseauswahl',fT:'Gebläseauswahl',fS:'Geben Sie Luftmesser- und Heizungsdaten ein; alle Katalog-Gebläse werden berechnet und die besten Treffer sortiert.',
+ fIn:'Ihre Anforderungen',fUse:'Werte aus Berechnung übernehmen',fNote:'Schläuche, Umgebung, Cd und Heizungsdruckverlust stammen von der Berechnungsseite. Alle Gebläse werden bei 50 Hz berechnet.',fSer:'Serien',fArea:'Gesamte Schlitzfläche',
+ fsN:'Geprüfte Modelle',fsOk:'Geeignet',fsOver:'Über Motorgrenze',fsOut:'Außerhalb',fTop:'Beste Treffer',fAll:'Alle geeigneten Modelle',fScore:'Punkte',
+ fScoreH:'Zuerst kommen Modelle, bei denen Ihre Heizung die Solltemperatur erreicht. Punkte = Geschwindigkeit am Ziel 45 % · Motorreserve 25 % · Heizung ausreichend 20 % · Energie (kleiner Motor) 10 %. Modelle über der Motorgrenze oder außerhalb des Katalogbereichs werden ausgeschlossen.',
+ fOpen:'In Berechnung öffnen',fSort:'Sortieren',sortScore:'Punkte',sortVx:'Zielgeschw.',sortQ:'Volumenstrom',sortKw:'Kleinster Motor',fBad:'Ungeeignete Modelle ({n})',rOver:'Über Motorgrenze ({u} %)',rOut:'Außerhalb des Katalogbereichs',
+ fNone:'<b>Kein Modell ist geeignet.</b> Die gesamte Schlitzfläche ({a} mm²) ist für die Gebläse dieses Katalogs zu klein. Schlitz verlängern oder verbreitern oder Messer hinzufügen.',
+ heatOk:'Heizung ausreichend',heatLow:'Heizung zu schwach → {t} °C',rankN:'#{n}',best:'Beste Wahl'});
 const LOCALE={tr:'tr-TR',en:'en-US',de:'de-DE'};
 let LANG='tr';
 try{const l=localStorage.getItem('blowerAKlang');if(I18N[l])LANG=l;}catch(e){}
@@ -1195,8 +1364,8 @@ let VIEW='calc';
 const QP=new URLSearchParams(location.search);
 if(I18N[QP.get('lang')])LANG=QP.get('lang');
 if(QP.get('theme'))document.documentElement.dataset.theme=QP.get('theme');
-try{const v=localStorage.getItem('blowerAKtab');if(['calc','scan','data','method','about'].includes(v))VIEW=v;}catch(e){}
-if(['calc','scan','data','method','about'].includes(QP.get('view')))VIEW=QP.get('view');
+try{const v=localStorage.getItem('blowerAKtab');if(['calc','find','scan','data','guide','method','about'].includes(v))VIEW=v;}catch(e){}
+if(['calc','find','scan','data','guide','method','about'].includes(QP.get('view')))VIEW=QP.get('view');
 
 /* ======================= YARDIMCI ======================= */
 const $=s=>document.querySelector(s);
@@ -1214,7 +1383,7 @@ function applyStatic(){
   document.querySelectorAll('[data-t]').forEach(el=>el.textContent=t(el.dataset.t));
   document.querySelectorAll('[data-tp]').forEach(el=>el.placeholder=t(el.dataset.tp));
   document.querySelectorAll('svg[data-icon]').forEach(el=>el.innerHTML=ICON[el.dataset.icon]);
-  $('#nav').innerHTML=[['calc','calc'],['scan','scan'],['data','data'],['method','method'],['about','about']].map(([v,i])=>`<button data-v="${v}" class="${VIEW===v?'on':''}">${ic(i)}<span>${t('nav_'+v)}</span></button>`).join('');
+  $('#nav').innerHTML=[['calc','calc'],['find','find'],['scan','scan'],['data','data'],['guide','book'],['method','method'],['about','about']].map(([v,i])=>`<button data-v="${v}" class="${VIEW===v?'on':''}">${ic(i)}<span>${t('nav_'+v)}</span></button>`).join('');
   $('#langs').innerHTML=['tr','en','de'].map(l=>`<button data-l="${l}" class="${LANG===l?'on':''}" title="${l.toUpperCase()}">${FLAG[l]}<span>${l.toUpperCase()}</span></button>`).join('');
   // model select
   let h=`<optgroup label="${t('optOwn')}">`+OWN.map(id=>`<option value="${id}">${BYID[id].name} · ${fmt(BYID[id].kw,1)} kW (${t('plate')})</option>`).join('')+'</optgroup>';
@@ -1226,7 +1395,7 @@ function applyStatic(){
     c.items.map(([k,l,u,,st,hint])=>`<label class="field"><span>${t(l)}</span><div class="inp"><input type="number" id="f_${k}" step="${st}" inputmode="decimal" value="${S[k]}"><em>${uT(u)}</em></div>${hint?`<small>${t(hint)}</small>`:''}</label>`).join('')+'</div></details>').join('');
   FIELDS.forEach(c=>c.items.forEach(([k])=>{const el=$('#f_'+k);el.addEventListener('input',()=>{const v=parseFloat(el.value);if(isFinite(v)){S[k]=v;update();}});}));
   $('#chart').setAttribute('aria-label',t('chartT'));
-  renderData(); renderGallery(); renderMethod(); renderAbout(); renderInav();
+  renderData(); renderGallery(); renderMethod(); renderAbout(); renderInav(); renderFinderInputs();
 }
 
 /* ======================= HESAP & ÇİZİM ======================= */
@@ -1245,6 +1414,8 @@ function update(){
     .map(([a,b])=>`<div><span>${a}</span><b>${b}</b></div>`).join('');
   renderStage(m); renderHero(); renderKpis(); renderFlow(); renderAlerts(); drawChart(); renderDp(); renderTiles(); renderOwn3(); renderSide(); renderOpbar();
   if(VIEW==='scan') renderScan();
+  if(VIEW==='guide') renderGuide();
+  if(VIEW==='find') renderFinder();
 }
 function renderHero(){
   const o=OP,el=$('#hero');
@@ -1622,12 +1793,583 @@ $('#opbar').addEventListener('click',e=>{if(e.target.closest('[data-top]'))windo
 addEventListener('scroll',()=>{placeOpbar();if(innerWidth<=1000)syncInav();},{passive:true});
 addEventListener('resize',placeOpbar);
 
+/* ======================= REHBER İÇERİĞİ ======================= */
+const GUIDE={
+tr:[
+['tldr','check','Kısaca',`
+<ul class="tldr">
+<li><b>Blower bir “hava pompasıdır”:</b> belirli bir debi–basınç eğrisi vardır. Karşısındaki direnç arttıkça basınç yükselir, debi düşer.</li>
+<li><b>Daha çok kW, daha çok hava demek değildir:</b> aynı gövdede daha güçlü motor, daha yüksek basınca dayanmak demektir. Daha çok hava için daha büyük gövde gerekir.</li>
+<li><b>Kurutmayı en çok hız yapar:</b> suyun büyük kısmı jetle mekanik olarak sıyrılır; ısı, geride kalan ince filmi buharlaştırır.</li>
+<li><b>Yarık alanı blower’a uygun olmalı:</b> çok dar yarık motoru zorlar, çok geniş yarık jeti zayıflatır.</li>
+<li><b>Knife’ı yakın ve hafif açılı tutun:</b> jet ortam havasıyla karıştıkça hem hız hem sıcaklık hızla düşer.</li>
+<li><b>Isıtıcı daima blower’ın çıkışına:</b> blower’a sıcak hava emdirmeyin.</li>
+</ul>`],
+['blower','fan','Yan kanal blower nedir, nasıl çalışır?',`
+<p>Yan kanal blower (side channel blower, ring blower veya “santrifüj blower” olarak da bilinir), elektrik motorunun miline takılı <b>kanatlı bir çark</b> ve bu çarkın çevresinde dolaşan <b>halka şeklinde bir kanaldan</b> oluşur. Çark ile gövde birbirine değmez; yağ, kayış veya valf yoktur. Bu yüzden az bakım ister ve hava yağsız çıkar.</p>
+{{DIAG_BLOWER}}
+<p>Çalışma prensibi basittir: Hava girişten içeri alınır. Dönen kanatlar havayı dışarı doğru savurur ve yan kanala atar. Kanal havayı tekrar kanatların dibine yönlendirir; kanatlar onu yeniden savurur. Çark bir tur dönerken hava bu döngüyü <b>onlarca kez</b> tekrarlar ve her seferinde biraz daha basınç kazanır. Tur tamamlanmadan önce bir <b>ayırıcı</b> havayı kanaldan ayırıp çıkışa yollar.</p>
+<p>Bu yapı sayesinde yan kanal blowerlar <b>orta debide, düşük–orta basınçta</b> (yaklaşık 50–600 mbar) sürekli ve darbesiz hava üretir. Kompresör değildirler: 6–8 bar gibi yüksek basınç veremezler, ama aynı enerjiyle çok daha fazla hava taşırlar. Air knife, pnömatik taşıma, havalandırma ve kurutma için idealdirler.</p>
+<div class="kv"><div><b>Tek kademe (TS / MS)</b><span>Tek çark. Daha çok debi, daha düşük basınç. Air knife ile kurutmada en yaygın seçim.</span></div><div><b>Çift kademe (TD)</b><span>İki çark seri bağlı. Benzer debide yaklaşık iki kat basınç. Uzun hat veya çok dar yarık gerekiyorsa.</span></div><div><b>Trifaze / monofaze</b><span>TS ve TD 3 fazlı (380 V), MS tek fazlı (220 V). Aynı gövdeler, farklı motor.</span></div></div>
+<div class="co info"><b>Önemli fikir:</b> Blower sabit bir basınç “vermez”. Hava çıkmaya çalışırken karşılaştığı direnç ne kadarsa o kadar basınç oluşur. Direnç yoksa basınç sıfıra yakın, debi en yüksektir; çıkış tamamen kapatılırsa debi sıfır, basınç en yüksektir — ve motor zarar görür.</div>`],
+['terms','gauge','Debi, basınç ve güç: üç temel kavram',`
+<p>Blower seçerken üç kavram her şeyi belirler. Bunları doğru anlamak, kataloğu doğru okumak demektir.</p>
+<h3>Debi (m³/h ve Nm³/h)</h3>
+<p><b>Debi</b>, bir saatte geçen hava hacmidir. Katalogdaki m³/h değerleri blower’ın <b>emişindeki</b> (ortam koşulundaki) hacimdir. Ancak hava ısınınca genleşir: 20 °C’deki 100 m³ hava 200 °C’de yaklaşık 160 m³ yer kaplar, ama içindeki hava miktarı (kütle) aynıdır. Bu yüzden karşılaştırmalarda <b>Nm³/h</b> (normal metreküp: 0 °C ve 1013 mbar’a çevrilmiş hacim) kullanılır; sıcaklıktan bağımsız olarak “gerçek hava miktarını” gösterir.</p>
+<h3>Basınç (mbar)</h3>
+<p><b>Basınç</b>, havayı dar bir yerden geçirebilmek için gereken itmedir. 1 bar = 1000 mbar; 100 mbar yaklaşık 1 metre su sütununa eşittir. Air knife’ta basınç doğrudan <b>hıza</b> dönüşür. Soğuk hava için kabaca:</p>
+<div class="fx">v ≈ 13 × √(Δp [mbar])  m/s        örnek: 100 mbar → ≈ 130 m/s</div>
+<p>Basıncı 4 katına çıkarmak hızı yalnızca 2 katına çıkarır. Sıcak hava daha hafif olduğu için aynı basınçta biraz daha hızlı çıkar.</p>
+<h3>Güç (kW)</h3>
+<p>Katalogda aynı gövdenin farklı kW’lı versiyonları vardır. Örneğin <b>51TS16 (1,6 kW)</b> ve <b>51TS22 (2,2 kW)</b> aynı çarkı kullanır; ikisinin de en yüksek debisi 210 m³/h’dir. Fark, motorun dayanabildiği basınçtadır: 51TS16 en fazla 190 mbar’a, 51TS22 ise 270 mbar’a kadar çalışabilir.</p>
+<div class="co tip"><b>Akılda tutun:</b> Daha fazla kW = daha yüksek basınca çıkabilme. Daha fazla hava (debi) istiyorsanız daha büyük gövde seçmelisiniz (51 → 71 → 81 → 91). Motorun çektiği güç de basınçla artar: düşük basınçta çalışan blower az enerji harcar.</div>`],
+['curve','chart','Blower eğrisi ve çalışma noktası',`
+<p>Her blower’ın bir <b>performans eğrisi</b> vardır: yatay eksende debi, dikey eksende basınç. Eğri soldan sağa iner — basınç arttıkça debi azalır. Katalogdaki noktalar bu eğriyi tanımlar.</p>
+<p>Hattınızın da bir eğrisi vardır: <b>sistem eğrisi</b>. Hortumlar, ısıtıcı ve özellikle air knife yarığı havaya direnç gösterir ve bu direnç debinin karesiyle artar. İki eğrinin kesiştiği nokta <b>çalışma noktasıdır</b>; blower kendiliğinden oraya yerleşir. Bu programın yaptığı iş tam olarak bu kesişimi bulmaktır.</p>
+{{DIAG_CURVE}}
+<p>Bahçe hortumunu düşünün: ucunu parmağınızla kısarsanız delik küçülür, su daha hızlı ve uzağa fışkırır ama daha az su akar. Air knife yarığı da aynıdır. <b>Dar yarık</b> (A noktası) = yüksek basınç, yüksek hız, az debi. <b>Geniş yarık</b> (B noktası) = düşük basınç, düşük hız, çok debi.</p>
+<div class="co warn"><b>Motor sınırı:</b> Katalogdaki “maksimum basınç” motorun tam yüküdür. Çalışma noktası bu çizginin üstüne çıkarsa motor fazla akım çeker, ısınır, termik atar veya yanar. Yarık kirlendikçe daralır ve basınç yükselir; bu yüzden çıkışa motor sınırına ayarlı bir <b>emniyet (by-pass) valfi</b> takmak iyi bir alışkanlıktır.</div>`],
+['freq','sliders','Frekans (inverter) ile ayar',`
+<p>Motor devri frekansla orantılıdır. Blower’ı bir inverterle yavaşlatıp hızlandırmak, onu ayarlamanın en verimli yoludur. Benzerlik yasaları şöyledir:</p>
+<div class="fx">Debi ∝ n        Basınç ∝ n²        Güç ∝ n³</div>
+<div class="kv"><div><b>40 Hz</b><span>Debi ≈ %80, basınç ≈ %64, güç ≈ %51</span></div><div><b>50 Hz</b><span>Katalog değerleri (referans)</span></div><div><b>60 Hz</b><span>Debi ≈ %120, basınç ≈ %144 — yalnızca motor izin veriyorsa (etiketteki 60 Hz değerleri)</span></div></div>
+<div class="co tip"><b>Vana ile kısmayın:</b> Debiyi azaltmak için çıkışa vana koyup kısmak, blower’ı daha yüksek basınca zorlar; hava ve blower ısınır, enerji boşa gider. Debiyi azaltmak istiyorsanız frekansı düşürün veya fazla havayı bir by-pass ile dışarı atın.</div>`],
+['dry','wind','Kurutma nasıl gerçekleşir?',`
+<p>Air knife ile kurutmada iki farklı olay birlikte çalışır:</p>
+<div class="kv"><div><b>1. Mekanik sıyırma</b><span>Jet, yüzeydeki suyu bir silecek gibi iter ve damlaları koparır. Suyun büyük kısmı bu şekilde uzaklaşır. Belirleyici olan <b>hedefteki hız</b>dır.</span></div><div><b>2. Buharlaştırma</b><span>Geride kalan çok ince su filmi buharlaşır. Belirleyici olan <b>sıcaklık</b>, havanın kuruluğu ve yüzeyden geçen hava miktarıdır.</span></div><div><b>3. Süre</b><span>Ürün jetin altından ne kadar hızlı geçiyorsa havanın etki süresi o kadar kısadır. Hızlı hatlarda daha güçlü jet veya ikinci bir knife gerekir.</span></div></div>
+<p>Jetin yüzeye vurduğu andaki itme gücü <b>darbe basıncı</b> ile ölçülür ve hızın karesiyle artar:</p>
+<div class="fx">Darbe basıncı ≈ ½ · ρ · v²        100 m/s → ≈ 60 mbar      50 m/s → ≈ 15 mbar</div>
+<p>Yani hedefteki hızı yarıya düşürmek, suyu itme gücünü dörtte bire düşürür. Bu yüzden knife ile ürün arasındaki mesafe çok önemlidir.</p>
+<h3>Isının rolü</h3>
+<p>Havayı ısıtmak bağıl nemini çok düşürür: 20 °C ve %50 nemli hava 80 °C’ye ısıtıldığında bağıl nemi yaklaşık %2,5’e iner. Kuru ve sıcak hava ince filmi çok daha hızlı buharlaştırır, yüzeyi de ısıtır. Ancak sıcak jet ortam havasını içine çekerek hızla soğur; hedefteki sıcaklık knife çıkışındakinden çok daha düşüktür.</p>
+<div class="co tip"><b>Hız mı, sıcaklık mı?</b> Kalın su filminde ve damlalarda önce <b>hız</b>. Geride kalan nem, lekesiz kuruma ve girintili yüzeyler için <b>sıcaklık</b>. En iyi sonuç: önce güçlü bir sıyırma, ardından sıcak hava.</div>`],
+['knife','knife','Air knife ve yarık ağzı',`
+<p>Air knife, içi boş bir gövde (plenum) ve boydan boya uzanan ince bir yarıktan oluşur. Blower’ın bastığı hava plenumda dağılır ve yarıktan düzgün bir <b>hava perdesi</b> olarak çıkar.</p>
+{{DIAG_KNIFE}}
+<h3>Yarık aralığı (ağız genişliği, b)</h3>
+<ul>
+<li><b>Genişletirseniz:</b> çıkış alanı büyür → aynı blower daha çok hava basar ama basınç düşer → çıkış hızı azalır. Motor rahatlar.</li>
+<li><b>Daraltırsanız:</b> basınç ve hız artar, debi azalır. Motor zorlanır; motor sınırını aşma riski vardır.</li>
+<li><b>Menzil:</b> Jetin “çekirdeği” yarıktan sonra yaklaşık <b>5–6 × b</b> boyunca hızını korur, sonra hız yaklaşık √(b/x) ile düşer. Yani geniş yarık daha uzağa etkili, dar yarık yakında daha serttir. 1 mm yarıkta 50 mm uzaklıkta hız, çıkış hızının yaklaşık üçte birine iner.</li>
+<li>Blower ile beslenen knife’larda yaygın aralık <b>0,5–2 mm</b>’dir.</li>
+</ul>
+<h3>Yarık uzunluğu</h3>
+<p>Uzunluk alanı doğrusal artırır: uzunluğu iki katına çıkarmak, debi açısından aralığı iki katına çıkarmakla benzer etki yapar; ama jet kalınlığı aynı kaldığı için menzil değişmez. Knife, ürün genişliğinden her iki yanda biraz (yaklaşık %5–10) uzun olmalıdır.</p>
+<div class="co info"><b>Altın kural — toplam yarık alanı:</b> Yarık alanı (aralık × uzunluk × knife adedi) blower’a uygun olmalıdır. Çok küçükse basınç motor sınırını aşar; çok büyükse hız düşük kalır ve kurutma zayıflar. Bu programın asıl amacı bu dengeyi bulmaktır.</div>
+<h3>Mesafe ve açı</h3>
+<ul>
+<li><b>Mesafe:</b> mümkün olduğunca yakın; pratikte genellikle 20–50 mm. Her ek santimetre hız ve sıcaklık kaybı demektir.</li>
+<li><b>Açı:</b> jeti ürünün geliş yönüne karşı, dikeyden 15–45° eğik tutun. Böylece su ürünün üzerinden geriye sıyrılır. Tam dik (90°) jet suyu iki yana dağıtır.</li>
+<li><b>Birden çok knife:</b> paralel bağlandığında yarık alanları toplanır; blower her birine daha az hava verir. Üst ve alt yüzey için iki knife yaygındır.</li>
+<li><b>Besleme:</b> uzun knife’larda havayı tek uçtan değil ortadan veya iki uçtan vermek, boy boyunca hızı daha düzgün yapar.</li>
+</ul>
+<div class="co warn"><b>Yarığı temiz tutun:</b> Kir, kireç veya boya yarığı daraltır; debi düşer, basınç ve motor yükü artar. Boşalma katsayısı (Cd) da temiz ve düzgün kenarlı bir yarıkta en yüksektir.</div>`],
+['heat','flame','Isıtıcı ve sıcaklık',`
+<p>Isıtıcı (genellikle kanatlı rezistanslı bir kanal ısıtıcısı) blower’ın bastığı havayı hedef sıcaklığa çıkarır.</p>
+<div class="co warn"><b>Yerleşim:</b> Isıtıcı daima blower’ın <b>çıkışına</b> (basınç tarafına) takılır. Blower’a sıcak hava emdirmek çark, conta, rulman ve motora zarar verir; ayrıca sıcak hava hafif olduğu için blower daha az hava kütlesi taşır.</div>
+<h3>Ne kadar güç gerekir?</h3>
+<p>Gerekli ısıtıcı gücü, ısıtılan hava miktarı ve sıcaklık artışıyla orantılıdır:</p>
+<div class="fx">P [kW] ≈ Nm³/h × ΔT [°C] ÷ 2750        örnek: 120 Nm³/h, 20 → 200 °C → ≈ 7,9 kW</div>
+<p>Buna ısıtıcı verimini ve hattaki ısı kaybını eklemek gerekir. Blower’ın kendisi de havayı biraz ısıtır (sıkıştırma ısısı); bu, ısıtıcının yükünü bir miktar azaltır.</p>
+<h3>Sıcaklığın sisteme etkisi</h3>
+<ul>
+<li>Sıcak hava genleşir: aynı kütle daha büyük hacim kaplar. Bu büyük hacmi yarıktan geçirmek için <b>daha yüksek basınç</b> gerekir; blower biraz daha zorlanır, debi (Nm³/h) biraz düşer.</li>
+<li>Buna karşılık sıcak hava daha hafif olduğu için yarıktan <b>daha hızlı</b> çıkar.</li>
+<li>Isıtıcının kendisi de genellikle 5–30 mbar basınç kaybı yaratır.</li>
+<li>Hedefteki sıcaklık çıkıştakinden çok düşüktür; jet ortam havasıyla karıştıkça soğur.</li>
+</ul>
+<h3>Güvenlik</h3>
+<ul>
+<li>Blower çalışmıyorsa ısıtıcı asla çalışmamalı (akış anahtarı veya kilitleme).</li>
+<li>Kapanışta önce ısıtıcıyı kapatın; blower birkaç dakika daha çalışıp ısıtıcıyı soğutsun.</li>
+<li>Sıcaklık bir termostat veya termokupl ile ölçülüp kontrol edilmeli; aşırı sıcaklık koruması bulunmalı.</li>
+<li>Sıcak hat için silikon veya metal hortum kullanın ve izole edin.</li>
+</ul>`],
+['hose','hose','Hortum ve boru seçimi',`
+<p>Hortumlar küçük bir detay gibi görünür ama basıncın önemli bir kısmını boşa harcayabilir. Hattaki basınç kaybı hızın karesiyle artar; çap küçüldüğünde hız da artar. Sonuçta kayıp, çapın yaklaşık <b>5. kuvvetiyle</b> değişir:</p>
+<div class="fx">Çapı %20 küçültmek → kayıp ≈ 3 kat      Çapı %20 büyütmek → kayıp ≈ 2,5 kat azalır</div>
+<ul>
+<li>Hattaki hızı mümkünse <b>20–25 m/s’nin altında</b> tutun.</li>
+<li>Blower’ın bağlantı ağzından daha küçük çaplı hortum kullanmayın.</li>
+<li>Hattı kısa tutun, dirsek sayısını azaltın, keskin dönüşlerden kaçının (her dirsek ek kayıp demektir).</li>
+<li>Sıcak hatta hortum ısıl olarak genleşir; bağlantıları ve kelepçeleri buna göre seçin.</li>
+</ul>
+<div class="co tip"><b>İyi bir tasarımda</b> blower basıncının büyük kısmı (%70–90) yarıkta harcanır, çünkü hızı yaratan odur. Hortum ve ısıtıcıdaki kayıplar küçük kalmalıdır. Hesaplama sayfasındaki “Basınç dağılımı” kartı bunu gösterir.</div>`],
+['sens','scan','Bunu değiştirirsem ne olur?',`
+<p>Aşağıdaki tablo, hesaplama sayfasındaki <b>mevcut ayarlarınızı</b> temel alır. Her satırda yalnızca tek bir ayar değiştirilip sistem yeniden hesaplanır; böylece her parametrenin etkisini kendi sisteminiz üzerinde görürsünüz.</p>
+{{SENS}}`],
+['example','target','Sizin hesabınızla örnek',`{{EXAMPLE}}`],
+['tips','alert','Pratik kontrol listesi ve sık hatalar',`
+<ul class="check">
+<li><b>Emiş filtresi</b> takın: toz ve parçacıklar çarkı aşındırır, kanalı tıkar.</li>
+<li><b>Emniyet (by-pass) valfi</b> ile basıncı motor sınırına göre sınırlandırın.</li>
+<li><b>Susturucu</b> kullanın: yan kanal blowerlar 64–75 dB(A) civarındadır.</li>
+<li>İlk çalıştırmada <b>dönüş yönünü</b> kontrol edin (gövdedeki ok).</li>
+<li><b>Motor akımını</b> etiketle karşılaştırın; etiket akımına yakın veya üstündeyse sistem fazla dirençlidir.</li>
+<li>Debiyi <b>vana ile kısmayın</b>; inverter veya by-pass kullanın.</li>
+<li><b>Yarığı düzenli temizleyin</b>; plenumda kir birikmesine izin vermeyin.</li>
+<li>Isıtıcıyı <b>blower’a kilitleyin</b>: blower dururken ısıtıcı çalışamasın.</li>
+</ul>
+<h3>Sık yapılan hatalar</h3>
+<ul class="bad">
+<li>Çok dar yarık → motor aşırı yüklenir, termik atar.</li>
+<li>Knife’ı ürüne çok uzak koymak → hız ve sıcaklık hedefe ulaşmadan kaybolur.</li>
+<li>İnce ve uzun hortum → basınç hortumda harcanır, yarığa az kalır.</li>
+<li>Isıtıcıyı blower’ın emişine koymak → blower arızası.</li>
+<li>Yalnızca sıcaklığa güvenmek → kalın su filmi ısıyla değil hızla sıyrılır.</li>
+</ul>`]
+],
+en:[
+['tldr','check','In short',`
+<ul class="tldr">
+<li><b>A blower is an “air pump”:</b> it has a fixed flow–pressure curve. The more resistance it faces, the higher the pressure and the lower the flow.</li>
+<li><b>More kW does not mean more air:</b> on the same frame a stronger motor only withstands a higher pressure. For more air you need a larger frame.</li>
+<li><b>Velocity does most of the drying:</b> most of the water is blown off mechanically by the jet; heat evaporates the thin film that remains.</li>
+<li><b>The slot area must suit the blower:</b> a slot that is too narrow overloads the motor, one that is too wide weakens the jet.</li>
+<li><b>Keep the knife close and slightly angled:</b> as the jet mixes with ambient air, both velocity and temperature drop quickly.</li>
+<li><b>Heater always on the blower outlet:</b> never let the blower suck in hot air.</li>
+</ul>`],
+['blower','fan','What is a side channel blower and how does it work?',`
+<p>A side channel blower (also called ring blower or regenerative blower) consists of an <b>impeller with many blades</b> mounted on the motor shaft and a <b>ring-shaped channel</b> around it. Impeller and housing never touch; there is no oil, belt or valve. It therefore needs little maintenance and delivers oil-free air.</p>
+{{DIAG_BLOWER}}
+<p>The principle is simple: air enters through the inlet. The rotating blades fling it outwards into the side channel. The channel guides it back to the root of the blades, which fling it out again. During one revolution the air repeats this cycle <b>dozens of times</b> and gains a little pressure each time. Before the turn is complete a <b>stripper</b> separates the air from the channel and sends it to the outlet.</p>
+<p>This design gives <b>medium flow at low to medium pressure</b> (roughly 50–600 mbar), continuous and pulsation-free. It is not a compressor: it cannot reach 6–8 bar, but it moves far more air for the same energy. Ideal for air knives, pneumatic conveying, aeration and drying.</p>
+<div class="kv"><div><b>Single stage (TS / MS)</b><span>One impeller. More flow, lower pressure. The most common choice for air-knife drying.</span></div><div><b>Two stage (TD)</b><span>Two impellers in series. About twice the pressure at similar flow. For long lines or very narrow slots.</span></div><div><b>3-phase / 1-phase</b><span>TS and TD are 3-phase (380 V), MS is single-phase (220 V). Same frames, different motor.</span></div></div>
+<div class="co info"><b>Key idea:</b> A blower does not “deliver” a fixed pressure. The pressure is whatever resistance the air meets on its way out. With no resistance the pressure is near zero and the flow is maximum; with the outlet fully closed the flow is zero and the pressure maximum — and the motor gets damaged.</div>`],
+['terms','gauge','Flow, pressure and power: three basic terms',`
+<p>Three terms decide everything when choosing a blower. Understanding them means reading the catalog correctly.</p>
+<h3>Flow (m³/h and Nm³/h)</h3>
+<p><b>Flow</b> is the volume of air passing per hour. Catalog values in m³/h refer to the blower <b>inlet</b> (ambient conditions). But air expands when heated: 100 m³ of air at 20 °C occupy about 160 m³ at 200 °C, yet the amount (mass) of air is the same. That is why <b>Nm³/h</b> (normal cubic metres, converted to 0 °C and 1013 mbar) is used for comparisons; it shows the “real amount of air” regardless of temperature.</p>
+<h3>Pressure (mbar)</h3>
+<p><b>Pressure</b> is the push needed to force air through a narrow opening. 1 bar = 1000 mbar; 100 mbar is about a 1 m water column. In an air knife pressure turns directly into <b>velocity</b>. For cold air roughly:</p>
+<div class="fx">v ≈ 13 × √(Δp [mbar])  m/s        example: 100 mbar → ≈ 130 m/s</div>
+<p>Four times the pressure gives only twice the velocity. Hot air is lighter, so at the same pressure it exits a little faster.</p>
+<h3>Power (kW)</h3>
+<p>The catalog lists the same frame with different motor sizes. For example <b>51TS16 (1.6 kW)</b> and <b>51TS22 (2.2 kW)</b> use the same impeller; both have a maximum flow of 210 m³/h. The difference is the pressure the motor can withstand: 51TS16 up to 190 mbar, 51TS22 up to 270 mbar.</p>
+<div class="co tip"><b>Remember:</b> More kW = able to reach a higher pressure. If you want more air (flow), choose a larger frame (51 → 71 → 81 → 91). The power drawn also rises with pressure: a blower running at low pressure uses little energy.</div>`],
+['curve','chart','Blower curve and operating point',`
+<p>Every blower has a <b>performance curve</b>: flow on the horizontal axis, pressure on the vertical axis. The curve falls from left to right — the higher the pressure, the lower the flow. The catalog points define this curve.</p>
+<p>Your line has a curve too: the <b>system curve</b>. Hoses, heater and above all the air-knife slot resist the air, and this resistance rises with the square of the flow. Where the two curves cross is the <b>operating point</b>; the blower settles there by itself. Finding this intersection is exactly what this tool does.</p>
+{{DIAG_CURVE}}
+<p>Think of a garden hose: put your thumb over the end and the opening gets smaller — water shoots out faster and further, but less water flows. An air-knife slot works the same way. <b>Narrow slot</b> (point A) = high pressure, high velocity, little flow. <b>Wide slot</b> (point B) = low pressure, low velocity, more flow.</p>
+<div class="co warn"><b>Motor limit:</b> The catalog “maximum pressure” is the motor’s full load. If the operating point rises above this line, the motor draws too much current, overheats, trips or burns out. A slot gets narrower as it clogs and the pressure rises; fitting a <b>relief (by-pass) valve</b> set to the motor limit is a good habit.</div>`],
+['freq','sliders','Adjusting with frequency (VFD)',`
+<p>Motor speed is proportional to frequency. Slowing down or speeding up the blower with a frequency inverter is the most efficient way to adjust it. The affinity laws:</p>
+<div class="fx">Flow ∝ n        Pressure ∝ n²        Power ∝ n³</div>
+<div class="kv"><div><b>40 Hz</b><span>Flow ≈ 80%, pressure ≈ 64%, power ≈ 51%</span></div><div><b>50 Hz</b><span>Catalog values (reference)</span></div><div><b>60 Hz</b><span>Flow ≈ 120%, pressure ≈ 144% — only if the motor allows it (60 Hz nameplate values)</span></div></div>
+<div class="co tip"><b>Do not throttle with a valve:</b> Closing a valve on the outlet to reduce flow forces the blower to a higher pressure; air and blower heat up and energy is wasted. To reduce flow, lower the frequency or vent the excess air through a by-pass.</div>`],
+['dry','wind','How does drying actually happen?',`
+<p>Air-knife drying combines two different effects:</p>
+<div class="kv"><div><b>1. Mechanical blow-off</b><span>The jet pushes the water off the surface like a wiper and tears off droplets. Most of the water leaves this way. What matters is the <b>velocity at the target</b>.</span></div><div><b>2. Evaporation</b><span>The very thin film that remains evaporates. What matters is <b>temperature</b>, dryness of the air and the amount of air passing over the surface.</span></div><div><b>3. Time</b><span>The faster the product passes under the jet, the shorter the exposure. Fast lines need a stronger jet or a second knife.</span></div></div>
+<p>The pushing power of the jet when it hits the surface is the <b>impact pressure</b>, which rises with the square of the velocity:</p>
+<div class="fx">Impact pressure ≈ ½ · ρ · v²        100 m/s → ≈ 60 mbar      50 m/s → ≈ 15 mbar</div>
+<p>So halving the velocity at the target cuts the pushing power to a quarter. That is why the distance between knife and product matters so much.</p>
+<h3>The role of heat</h3>
+<p>Heating air lowers its relative humidity drastically: air at 20 °C and 50% RH heated to 80 °C drops to about 2.5% RH. Dry, hot air evaporates the thin film much faster and also warms the surface. However, the hot jet entrains ambient air and cools quickly; the temperature at the target is much lower than at the knife outlet.</p>
+<div class="co tip"><b>Velocity or temperature?</b> For thick films and droplets, <b>velocity</b> first. For the remaining moisture, spot-free drying and recessed surfaces, <b>temperature</b>. Best result: strong blow-off first, then hot air.</div>`],
+['knife','knife','The air knife and its slot',`
+<p>An air knife is a hollow body (plenum) with a thin slot along its full length. The air from the blower spreads inside the plenum and leaves the slot as an even <b>air curtain</b>.</p>
+{{DIAG_KNIFE}}
+<h3>Slot gap (opening width, b)</h3>
+<ul>
+<li><b>Wider:</b> the outlet area grows → the same blower delivers more air but at lower pressure → exit velocity drops. The motor is relieved.</li>
+<li><b>Narrower:</b> pressure and velocity rise, flow falls. The motor works harder and may exceed its limit.</li>
+<li><b>Reach:</b> the jet “core” keeps its velocity for about <b>5–6 × b</b> after the slot, then velocity falls roughly with √(b/x). A wide slot reaches further, a narrow slot hits harder close up. With a 1 mm slot the velocity at 50 mm is about one third of the exit velocity.</li>
+<li>Typical gaps for blower-fed knives are <b>0.5–2 mm</b>.</li>
+</ul>
+<h3>Slot length</h3>
+<p>Length increases the area linearly: doubling the length has a similar effect on flow as doubling the gap, but since the jet thickness stays the same the reach does not change. The knife should be slightly longer than the product (about 5–10% on each side).</p>
+<div class="co info"><b>Golden rule — total slot area:</b> The slot area (gap × length × number of knives) must suit the blower. Too small and the pressure exceeds the motor limit; too large and the velocity stays low and drying is weak. Finding this balance is the main purpose of this tool.</div>
+<h3>Distance and angle</h3>
+<ul>
+<li><b>Distance:</b> as close as possible; in practice usually 20–50 mm. Every extra centimetre costs velocity and temperature.</li>
+<li><b>Angle:</b> tilt the jet 15–45° from vertical, against the direction the product comes from. The water is then scraped back off the product. A jet at exactly 90° spreads water to both sides.</li>
+<li><b>Several knives:</b> connected in parallel their slot areas add up; the blower gives each one less air. Two knives for top and bottom surfaces are common.</li>
+<li><b>Feeding:</b> on long knives, feeding air in the middle or from both ends instead of one end gives a more even velocity along the length.</li>
+</ul>
+<div class="co warn"><b>Keep the slot clean:</b> Dirt, scale or paint narrow the slot; flow drops, pressure and motor load rise. The discharge coefficient (Cd) is also highest for a clean slot with smooth edges.</div>`],
+['heat','flame','Heater and temperature',`
+<p>The heater (usually a finned duct heater with resistance elements) brings the air delivered by the blower up to the target temperature.</p>
+<div class="co warn"><b>Placement:</b> The heater is always fitted on the blower <b>outlet</b> (pressure side). Letting the blower suck hot air damages impeller, seals, bearings and motor; hot air is also lighter, so the blower moves less air mass.</div>
+<h3>How much power is needed?</h3>
+<p>The heater power required is proportional to the amount of air and the temperature rise:</p>
+<div class="fx">P [kW] ≈ Nm³/h × ΔT [°C] ÷ 2750        example: 120 Nm³/h, 20 → 200 °C → ≈ 7.9 kW</div>
+<p>Add heater efficiency and heat losses in the line. The blower itself also warms the air a little (heat of compression), which slightly reduces the heater load.</p>
+<h3>Effect of temperature on the system</h3>
+<ul>
+<li>Hot air expands: the same mass takes up a larger volume. Pushing this larger volume through the slot needs <b>more pressure</b>; the blower works a little harder and the flow (Nm³/h) drops a little.</li>
+<li>On the other hand hot air is lighter, so it leaves the slot <b>faster</b>.</li>
+<li>The heater itself usually causes a pressure drop of 5–30 mbar.</li>
+<li>The temperature at the target is much lower than at the outlet; the jet cools as it mixes with ambient air.</li>
+</ul>
+<h3>Safety</h3>
+<ul>
+<li>The heater must never run while the blower is off (flow switch or interlock).</li>
+<li>When shutting down, switch the heater off first; let the blower run a few more minutes to cool the heater.</li>
+<li>Measure and control the temperature with a thermostat or thermocouple; provide over-temperature protection.</li>
+<li>Use silicone or metal hose on the hot side and insulate it.</li>
+</ul>`],
+['hose','hose','Choosing hoses and pipes',`
+<p>Hoses look like a small detail but can waste a large share of the pressure. Line pressure loss rises with the square of velocity, and velocity rises as the diameter shrinks. As a result the loss changes roughly with the <b>5th power</b> of the diameter:</p>
+<div class="fx">20% smaller diameter → loss ≈ 3×      20% larger diameter → loss ≈ 2.5× lower</div>
+<ul>
+<li>Keep line velocity <b>below 20–25 m/s</b> if possible.</li>
+<li>Never use a hose smaller than the blower connection.</li>
+<li>Keep the line short, use few elbows and avoid sharp bends (every elbow adds loss).</li>
+<li>On the hot side the hose expands thermally; choose fittings and clamps accordingly.</li>
+</ul>
+<div class="co tip"><b>In a good design</b> most of the blower pressure (70–90%) is used at the slot, because that is what creates velocity. Losses in hoses and heater should stay small. The “Pressure breakdown” card on the calculation page shows this.</div>`],
+['sens','scan','What happens if I change this?',`
+<p>The table below is based on <b>your current settings</b> on the calculation page. In each row only one setting is changed and the system is recalculated, so you can see the effect of every parameter on your own system.</p>
+{{SENS}}`],
+['example','target','Worked example with your settings',`{{EXAMPLE}}`],
+['tips','alert','Practical checklist and common mistakes',`
+<ul class="check">
+<li>Fit an <b>inlet filter</b>: dust and particles wear the impeller and clog the channel.</li>
+<li>Limit pressure to the motor limit with a <b>relief (by-pass) valve</b>.</li>
+<li>Use a <b>silencer</b>: side channel blowers are around 64–75 dB(A).</li>
+<li>Check the <b>direction of rotation</b> at first start (arrow on the housing).</li>
+<li>Compare the <b>motor current</b> with the nameplate; close to or above it means the system has too much resistance.</li>
+<li><b>Do not throttle</b> flow with a valve; use a VFD or by-pass.</li>
+<li><b>Clean the slot regularly</b>; do not let dirt build up in the plenum.</li>
+<li><b>Interlock the heater</b> with the blower so it cannot run while the blower is off.</li>
+</ul>
+<h3>Common mistakes</h3>
+<ul class="bad">
+<li>Slot too narrow → motor overload, thermal trip.</li>
+<li>Knife too far from the product → velocity and temperature are lost before reaching the target.</li>
+<li>Thin, long hose → pressure is wasted in the hose, little is left for the slot.</li>
+<li>Heater on the blower inlet → blower failure.</li>
+<li>Relying on temperature only → thick water films are removed by velocity, not heat.</li>
+</ul>`]
+],
+de:[
+['tldr','check','Kurz gesagt',`
+<ul class="tldr">
+<li><b>Ein Gebläse ist eine „Luftpumpe“:</b> es hat eine feste Volumenstrom-Druck-Kennlinie. Je größer der Widerstand, desto höher der Druck und desto kleiner der Volumenstrom.</li>
+<li><b>Mehr kW heißt nicht mehr Luft:</b> bei gleicher Baugröße hält ein stärkerer Motor nur einen höheren Druck aus. Für mehr Luft braucht man eine größere Baugröße.</li>
+<li><b>Den Großteil der Trocknung leistet die Geschwindigkeit:</b> das meiste Wasser wird vom Strahl mechanisch abgeblasen; Wärme verdunstet den verbleibenden dünnen Film.</li>
+<li><b>Die Schlitzfläche muss zum Gebläse passen:</b> ein zu schmaler Schlitz überlastet den Motor, ein zu breiter schwächt den Strahl.</li>
+<li><b>Messer nah und leicht schräg halten:</b> mit der Vermischung mit Umgebungsluft fallen Geschwindigkeit und Temperatur schnell ab.</li>
+<li><b>Heizung immer auf der Druckseite des Gebläses:</b> das Gebläse nie heiße Luft ansaugen lassen.</li>
+</ul>`],
+['blower','fan','Was ist ein Seitenkanalgebläse und wie funktioniert es?',`
+<p>Ein Seitenkanalgebläse (auch Ringverdichter genannt) besteht aus einem <b>Laufrad mit vielen Schaufeln</b> auf der Motorwelle und einem <b>ringförmigen Kanal</b> darum herum. Laufrad und Gehäuse berühren sich nicht; es gibt kein Öl, keinen Riemen und keine Ventile. Daher ist es wartungsarm und liefert ölfreie Luft.</p>
+{{DIAG_BLOWER}}
+<p>Das Prinzip ist einfach: Die Luft tritt am Eintritt ein. Die rotierenden Schaufeln schleudern sie nach außen in den Seitenkanal. Der Kanal führt sie zurück zum Schaufelgrund, wo sie erneut nach außen geschleudert wird. Während einer Umdrehung wiederholt die Luft diesen Kreislauf <b>dutzende Male</b> und gewinnt jedes Mal etwas Druck. Vor Ende der Umdrehung trennt ein <b>Unterbrecher</b> die Luft vom Kanal und leitet sie zum Austritt.</p>
+<p>So entsteht <b>mittlerer Volumenstrom bei niedrigem bis mittlerem Druck</b> (etwa 50–600 mbar), kontinuierlich und pulsationsfrei. Es ist kein Kompressor: 6–8 bar sind nicht möglich, dafür wird mit gleicher Energie viel mehr Luft gefördert. Ideal für Luftmesser, pneumatische Förderung, Belüftung und Trocknung.</p>
+<div class="kv"><div><b>Einstufig (TS / MS)</b><span>Ein Laufrad. Mehr Volumenstrom, geringerer Druck. Die häufigste Wahl für die Luftmessertrocknung.</span></div><div><b>Zweistufig (TD)</b><span>Zwei Laufräder in Reihe. Etwa doppelter Druck bei ähnlichem Volumenstrom. Für lange Leitungen oder sehr schmale Schlitze.</span></div><div><b>Drehstrom / Wechselstrom</b><span>TS und TD dreiphasig (380 V), MS einphasig (220 V). Gleiche Baugrößen, anderer Motor.</span></div></div>
+<div class="co info"><b>Wichtiger Gedanke:</b> Ein Gebläse „liefert“ keinen festen Druck. Der Druck entspricht dem Widerstand, auf den die Luft trifft. Ohne Widerstand ist der Druck nahezu null und der Volumenstrom maximal; bei geschlossenem Austritt ist der Volumenstrom null und der Druck maximal — und der Motor nimmt Schaden.</div>`],
+['terms','gauge','Volumenstrom, Druck und Leistung: drei Grundbegriffe',`
+<p>Bei der Gebläseauswahl entscheiden drei Begriffe alles. Wer sie versteht, liest den Katalog richtig.</p>
+<h3>Volumenstrom (m³/h und Nm³/h)</h3>
+<p>Der <b>Volumenstrom</b> ist das Luftvolumen pro Stunde. Katalogwerte in m³/h beziehen sich auf den <b>Ansaug</b> des Gebläses (Umgebungsbedingungen). Luft dehnt sich beim Erwärmen jedoch aus: 100 m³ Luft bei 20 °C nehmen bei 200 °C etwa 160 m³ ein, die Luftmenge (Masse) bleibt gleich. Deshalb vergleicht man in <b>Nm³/h</b> (Normkubikmeter, umgerechnet auf 0 °C und 1013 mbar); das zeigt die „echte Luftmenge“ unabhängig von der Temperatur.</p>
+<h3>Druck (mbar)</h3>
+<p><b>Druck</b> ist der Schub, der nötig ist, um Luft durch eine enge Öffnung zu drücken. 1 bar = 1000 mbar; 100 mbar entsprechen etwa 1 m Wassersäule. Im Luftmesser wird Druck direkt zu <b>Geschwindigkeit</b>. Für kalte Luft grob:</p>
+<div class="fx">v ≈ 13 × √(Δp [mbar])  m/s        Beispiel: 100 mbar → ≈ 130 m/s</div>
+<p>Vierfacher Druck ergibt nur doppelte Geschwindigkeit. Heiße Luft ist leichter und tritt bei gleichem Druck etwas schneller aus.</p>
+<h3>Leistung (kW)</h3>
+<p>Im Katalog gibt es dieselbe Baugröße mit verschiedenen Motoren. <b>51TS16 (1,6 kW)</b> und <b>51TS22 (2,2 kW)</b> nutzen dasselbe Laufrad; beide haben 210 m³/h maximalen Volumenstrom. Der Unterschied ist der Druck, den der Motor aushält: 51TS16 bis 190 mbar, 51TS22 bis 270 mbar.</p>
+<div class="co tip"><b>Merke:</b> Mehr kW = höherer erreichbarer Druck. Für mehr Luft (Volumenstrom) wählen Sie eine größere Baugröße (51 → 71 → 81 → 91). Die aufgenommene Leistung steigt mit dem Druck: ein Gebläse bei niedrigem Druck verbraucht wenig Energie.</div>`],
+['curve','chart','Gebläsekennlinie und Betriebspunkt',`
+<p>Jedes Gebläse hat eine <b>Kennlinie</b>: Volumenstrom auf der waagrechten, Druck auf der senkrechten Achse. Die Kurve fällt von links nach rechts — je höher der Druck, desto kleiner der Volumenstrom. Die Katalogpunkte beschreiben diese Kurve.</p>
+<p>Auch Ihre Leitung hat eine Kurve: die <b>Anlagenkennlinie</b>. Schläuche, Heizung und vor allem der Messerschlitz setzen der Luft Widerstand entgegen, der mit dem Quadrat des Volumenstroms steigt. Der Schnittpunkt beider Kurven ist der <b>Betriebspunkt</b>; dort stellt sich das Gebläse von selbst ein. Genau diesen Schnittpunkt berechnet dieses Tool.</p>
+{{DIAG_CURVE}}
+<p>Denken Sie an einen Gartenschlauch: Halten Sie den Daumen auf das Ende, wird die Öffnung kleiner — das Wasser spritzt schneller und weiter, aber es fließt weniger. Beim Messerschlitz ist es genauso. <b>Schmaler Schlitz</b> (Punkt A) = hoher Druck, hohe Geschwindigkeit, wenig Volumenstrom. <b>Breiter Schlitz</b> (Punkt B) = niedriger Druck, geringe Geschwindigkeit, viel Volumenstrom.</p>
+<div class="co warn"><b>Motorgrenze:</b> Der „maximale Druck“ im Katalog ist die Volllast des Motors. Liegt der Betriebspunkt darüber, nimmt der Motor zu viel Strom auf, wird heiß, löst aus oder brennt durch. Ein verschmutzter Schlitz wird enger und der Druck steigt; ein auf die Motorgrenze eingestelltes <b>Sicherheits-/Bypassventil</b> ist daher empfehlenswert.</div>`],
+['freq','sliders','Einstellen mit Frequenzumrichter',`
+<p>Die Motordrehzahl ist proportional zur Frequenz. Das Gebläse per Frequenzumrichter langsamer oder schneller laufen zu lassen, ist die effizienteste Art der Einstellung. Die Ähnlichkeitsgesetze:</p>
+<div class="fx">Volumenstrom ∝ n        Druck ∝ n²        Leistung ∝ n³</div>
+<div class="kv"><div><b>40 Hz</b><span>Volumenstrom ≈ 80 %, Druck ≈ 64 %, Leistung ≈ 51 %</span></div><div><b>50 Hz</b><span>Katalogwerte (Referenz)</span></div><div><b>60 Hz</b><span>Volumenstrom ≈ 120 %, Druck ≈ 144 % — nur wenn der Motor es zulässt (60-Hz-Typenschildwerte)</span></div></div>
+<div class="co tip"><b>Nicht mit einem Ventil drosseln:</b> Ein Drosselventil am Austritt zwingt das Gebläse auf höheren Druck; Luft und Gebläse erwärmen sich, Energie geht verloren. Zum Reduzieren des Volumenstroms die Frequenz senken oder überschüssige Luft über einen Bypass ablassen.</div>`],
+['dry','wind','Wie funktioniert die Trocknung?',`
+<p>Bei der Luftmessertrocknung wirken zwei Effekte zusammen:</p>
+<div class="kv"><div><b>1. Mechanisches Abblasen</b><span>Der Strahl schiebt das Wasser wie ein Wischer von der Oberfläche und reißt Tropfen ab. Der Großteil des Wassers geht so weg. Entscheidend ist die <b>Geschwindigkeit am Ziel</b>.</span></div><div><b>2. Verdunstung</b><span>Der sehr dünne Restfilm verdunstet. Entscheidend sind <b>Temperatur</b>, Trockenheit der Luft und die über die Oberfläche strömende Luftmenge.</span></div><div><b>3. Zeit</b><span>Je schneller das Produkt unter dem Strahl durchläuft, desto kürzer die Einwirkzeit. Schnelle Linien brauchen einen stärkeren Strahl oder ein zweites Messer.</span></div></div>
+<p>Die Schubkraft des Strahls beim Auftreffen ist der <b>Staudruck</b>; er steigt mit dem Quadrat der Geschwindigkeit:</p>
+<div class="fx">Staudruck ≈ ½ · ρ · v²        100 m/s → ≈ 60 mbar      50 m/s → ≈ 15 mbar</div>
+<p>Halbiert sich die Geschwindigkeit am Ziel, sinkt die Schubkraft auf ein Viertel. Deshalb ist der Abstand zwischen Messer und Produkt so wichtig.</p>
+<h3>Die Rolle der Wärme</h3>
+<p>Erwärmen senkt die relative Feuchte drastisch: Luft mit 20 °C und 50 % r. F. hat bei 80 °C nur noch etwa 2,5 % r. F. Trockene, heiße Luft verdunstet den dünnen Film viel schneller und erwärmt die Oberfläche. Der heiße Strahl saugt jedoch Umgebungsluft an und kühlt schnell ab; die Temperatur am Ziel ist deutlich niedriger als am Messeraustritt.</p>
+<div class="co tip"><b>Geschwindigkeit oder Temperatur?</b> Bei dicken Filmen und Tropfen zuerst <b>Geschwindigkeit</b>. Für Restfeuchte, fleckenfreies Trocknen und vertiefte Flächen <b>Temperatur</b>. Bestes Ergebnis: erst kräftig abblasen, dann heiße Luft.</div>`],
+['knife','knife','Das Luftmesser und sein Schlitz',`
+<p>Ein Luftmesser ist ein hohler Körper (Plenum) mit einem dünnen Schlitz über die ganze Länge. Die Luft vom Gebläse verteilt sich im Plenum und tritt als gleichmäßiger <b>Luftvorhang</b> aus dem Schlitz.</p>
+{{DIAG_KNIFE}}
+<h3>Schlitzbreite (Öffnung, b)</h3>
+<ul>
+<li><b>Breiter:</b> die Austrittsfläche wächst → dasselbe Gebläse fördert mehr Luft, aber bei geringerem Druck → die Austrittsgeschwindigkeit sinkt. Der Motor wird entlastet.</li>
+<li><b>Schmaler:</b> Druck und Geschwindigkeit steigen, der Volumenstrom sinkt. Der Motor wird stärker belastet und kann seine Grenze überschreiten.</li>
+<li><b>Reichweite:</b> der Strahl-„Kern“ hält seine Geschwindigkeit etwa <b>5–6 × b</b> nach dem Schlitz, danach fällt sie ungefähr mit √(b/x). Ein breiter Schlitz wirkt weiter, ein schmaler nah härter. Bei 1 mm Schlitz beträgt die Geschwindigkeit in 50 mm etwa ein Drittel der Austrittsgeschwindigkeit.</li>
+<li>Übliche Breiten bei gebläsegespeisten Messern: <b>0,5–2 mm</b>.</li>
+</ul>
+<h3>Schlitzlänge</h3>
+<p>Die Länge vergrößert die Fläche linear: doppelte Länge wirkt auf den Volumenstrom ähnlich wie doppelte Breite, die Reichweite bleibt aber gleich, da die Strahldicke gleich bleibt. Das Messer sollte etwas länger als das Produkt sein (etwa 5–10 % je Seite).</p>
+<div class="co info"><b>Goldene Regel — gesamte Schlitzfläche:</b> Die Schlitzfläche (Breite × Länge × Anzahl Messer) muss zum Gebläse passen. Zu klein: der Druck überschreitet die Motorgrenze; zu groß: die Geschwindigkeit bleibt gering und die Trocknung schwach. Dieses Gleichgewicht zu finden ist der Hauptzweck dieses Tools.</div>
+<h3>Abstand und Winkel</h3>
+<ul>
+<li><b>Abstand:</b> so nah wie möglich; in der Praxis meist 20–50 mm. Jeder zusätzliche Zentimeter kostet Geschwindigkeit und Temperatur.</li>
+<li><b>Winkel:</b> den Strahl 15–45° gegen die Senkrechte neigen, entgegen der Laufrichtung des Produkts. So wird das Wasser nach hinten abgestreift. Ein senkrechter Strahl (90°) verteilt das Wasser zu beiden Seiten.</li>
+<li><b>Mehrere Messer:</b> parallel geschaltet addieren sich die Schlitzflächen; jedes Messer bekommt weniger Luft. Zwei Messer für Ober- und Unterseite sind üblich.</li>
+<li><b>Einspeisung:</b> bei langen Messern ergibt eine Einspeisung in der Mitte oder an beiden Enden eine gleichmäßigere Geschwindigkeit.</li>
+</ul>
+<div class="co warn"><b>Schlitz sauber halten:</b> Schmutz, Kalk oder Farbe verengen den Schlitz; der Volumenstrom sinkt, Druck und Motorlast steigen. Auch die Ausflusszahl (Cd) ist bei einem sauberen Schlitz mit glatten Kanten am höchsten.</div>`],
+['heat','flame','Heizung und Temperatur',`
+<p>Die Heizung (meist ein Kanalheizregister mit Rippenheizelementen) bringt die vom Gebläse geförderte Luft auf Solltemperatur.</p>
+<div class="co warn"><b>Einbauort:</b> Die Heizung sitzt immer am <b>Austritt</b> (Druckseite) des Gebläses. Heiße Ansaugluft schädigt Laufrad, Dichtungen, Lager und Motor; zudem ist heiße Luft leichter und das Gebläse fördert weniger Luftmasse.</div>
+<h3>Wie viel Leistung wird benötigt?</h3>
+<p>Die benötigte Heizleistung ist proportional zur Luftmenge und zur Temperaturerhöhung:</p>
+<div class="fx">P [kW] ≈ Nm³/h × ΔT [°C] ÷ 2750        Beispiel: 120 Nm³/h, 20 → 200 °C → ≈ 7,9 kW</div>
+<p>Dazu kommen Wirkungsgrad der Heizung und Wärmeverluste der Leitung. Das Gebläse selbst erwärmt die Luft etwas (Verdichtungswärme), was die Heizung leicht entlastet.</p>
+<h3>Einfluss der Temperatur auf die Anlage</h3>
+<ul>
+<li>Heiße Luft dehnt sich aus: dieselbe Masse braucht mehr Volumen. Um dieses größere Volumen durch den Schlitz zu drücken, ist <b>mehr Druck</b> nötig; das Gebläse wird etwas stärker belastet, der Volumenstrom (Nm³/h) sinkt leicht.</li>
+<li>Dafür ist heiße Luft leichter und tritt <b>schneller</b> aus dem Schlitz.</li>
+<li>Die Heizung selbst verursacht meist 5–30 mbar Druckverlust.</li>
+<li>Die Temperatur am Ziel ist deutlich niedriger als am Austritt; der Strahl kühlt durch Vermischung ab.</li>
+</ul>
+<h3>Sicherheit</h3>
+<ul>
+<li>Die Heizung darf nie ohne laufendes Gebläse arbeiten (Strömungswächter oder Verriegelung).</li>
+<li>Beim Abschalten zuerst die Heizung aus; das Gebläse einige Minuten nachlaufen lassen.</li>
+<li>Temperatur mit Thermostat oder Thermoelement messen und regeln; Übertemperaturschutz vorsehen.</li>
+<li>Auf der heißen Seite Silikon- oder Metallschlauch verwenden und isolieren.</li>
+</ul>`],
+['hose','hose','Auswahl von Schläuchen und Rohren',`
+<p>Schläuche wirken wie ein Detail, können aber einen großen Teil des Drucks verschwenden. Der Druckverlust steigt mit dem Quadrat der Geschwindigkeit, und die Geschwindigkeit steigt, wenn der Durchmesser kleiner wird. Insgesamt ändert sich der Verlust etwa mit der <b>5. Potenz</b> des Durchmessers:</p>
+<div class="fx">20 % kleinerer Ø → Verlust ≈ 3-fach      20 % größerer Ø → Verlust ≈ 2,5-mal kleiner</div>
+<ul>
+<li>Leitungsgeschwindigkeit möglichst <b>unter 20–25 m/s</b> halten.</li>
+<li>Nie einen kleineren Schlauch als den Gebläseanschluss verwenden.</li>
+<li>Leitung kurz halten, wenige Bögen, keine scharfen Umlenkungen (jeder Bogen kostet Druck).</li>
+<li>Auf der heißen Seite dehnt sich der Schlauch aus; Anschlüsse und Schellen entsprechend wählen.</li>
+</ul>
+<div class="co tip"><b>Bei guter Auslegung</b> wird der größte Teil des Gebläsedrucks (70–90 %) am Schlitz verbraucht, denn dort entsteht die Geschwindigkeit. Verluste in Schlauch und Heizung sollten klein bleiben. Die Karte „Druckaufteilung“ auf der Berechnungsseite zeigt das.</div>`],
+['sens','scan','Was passiert, wenn ich das ändere?',`
+<p>Die Tabelle basiert auf <b>Ihren aktuellen Einstellungen</b> der Berechnungsseite. In jeder Zeile wird nur eine Einstellung geändert und die Anlage neu berechnet — so sehen Sie die Wirkung jedes Parameters an Ihrer eigenen Anlage.</p>
+{{SENS}}`],
+['example','target','Beispiel mit Ihren Einstellungen',`{{EXAMPLE}}`],
+['tips','alert','Praxis-Checkliste und häufige Fehler',`
+<ul class="check">
+<li><b>Ansaugfilter</b> einbauen: Staub und Partikel verschleißen das Laufrad und verstopfen den Kanal.</li>
+<li>Druck mit einem <b>Sicherheits-/Bypassventil</b> auf die Motorgrenze begrenzen.</li>
+<li><b>Schalldämpfer</b> verwenden: Seitenkanalgebläse liegen bei etwa 64–75 dB(A).</li>
+<li>Beim ersten Start die <b>Drehrichtung</b> prüfen (Pfeil am Gehäuse).</li>
+<li><b>Motorstrom</b> mit dem Typenschild vergleichen; nahe oder über dem Nennstrom bedeutet zu viel Widerstand.</li>
+<li>Volumenstrom <b>nicht mit Ventil drosseln</b>; Frequenzumrichter oder Bypass nutzen.</li>
+<li><b>Schlitz regelmäßig reinigen</b>; keinen Schmutz im Plenum ansammeln lassen.</li>
+<li>Heizung mit dem Gebläse <b>verriegeln</b>, damit sie bei stehendem Gebläse nicht läuft.</li>
+</ul>
+<h3>Häufige Fehler</h3>
+<ul class="bad">
+<li>Zu schmaler Schlitz → Motorüberlast, Auslösen des Motorschutzes.</li>
+<li>Messer zu weit vom Produkt → Geschwindigkeit und Temperatur gehen vor dem Ziel verloren.</li>
+<li>Dünner, langer Schlauch → der Druck wird im Schlauch verbraucht, für den Schlitz bleibt wenig.</li>
+<li>Heizung auf der Saugseite → Gebläseschaden.</li>
+<li>Nur auf Temperatur setzen → dicke Wasserfilme werden durch Geschwindigkeit entfernt, nicht durch Wärme.</li>
+</ul>`]
+]};
+
+/* ======================= REHBER ÇİZİMLERİ ======================= */
+function diagBlower(){
+  const cx=170,cy=160,P=(r,a)=>[cx+r*Math.cos(a*Math.PI/180),cy+r*Math.sin(a*Math.PI/180)];
+  let h=`<svg viewBox="0 0 520 290" role="img" aria-label="${t('g_spiral')}"><defs><marker id="ahB" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/></marker></defs>`;
+  [cx-62,cx+62].forEach(x=>{h+=`<rect x="${x-15}" y="24" width="30" height="42" fill="var(--surface-3)" stroke="var(--border-strong)"/>`;});
+  h+=`<circle cx="${cx}" cy="${cy}" r="118" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2"/>`;
+  h+=`<circle cx="${cx}" cy="${cy}" r="101" fill="none" stroke="var(--accent-soft)" stroke-width="30"/>`;
+  for(let i=0;i<36;i++){const [x1,y1]=P(58,i*10),[x2,y2]=P(100,i*10);h+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="var(--text-2)" stroke-width="2" opacity=".55"/>`;}
+  h+=`<circle cx="${cx}" cy="${cy}" r="58" fill="var(--surface-3)" stroke="var(--border-strong)"/><circle cx="${cx}" cy="${cy}" r="20" fill="var(--accent)"/>`;
+  h+=`<rect x="${cx-9}" y="${cy-118}" width="18" height="34" rx="2" fill="var(--text-2)"/>`;
+  [[-130,-178],[-192,-242],[-256,-306],[-320,-370],[-384,-412]].forEach(([a,b])=>{let d='';for(let k=0;k<=10;k++){const [x,y]=P(101,a+(b-a)*k/10);d+=(k?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);}h+=`<path d="${d}" fill="none" stroke="var(--accent)" stroke-width="2.5" marker-end="url(#ahB)"/>`;});
+  [-150,-215,-280,-345].forEach(a=>{const [x,y]=P(101,a);h+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="8" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-dasharray="9 4" opacity=".8"/>`;});
+  h+=`<line x1="${cx-62}" y1="2" x2="${cx-62}" y2="40" stroke="var(--accent)" stroke-width="2.5" marker-end="url(#ahB)"/><line x1="${cx+62}" y1="40" x2="${cx+62}" y2="4" stroke="var(--accent)" stroke-width="2.5" marker-end="url(#ahB)"/>`;
+  const L=(x1,y1,x2,y2,txt)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--muted)" stroke-width="1"/><circle cx="${x1}" cy="${y1}" r="3" fill="var(--muted)"/><text x="${x2+6}" y="${y2+4}" font-size="13" font-weight="600" fill="var(--text)">${txt}</text>`;
+  h+=`<text x="${cx-84}" y="20" text-anchor="end" font-size="13" font-weight="600" fill="var(--text)">${t('g_in')}</text><text x="${cx+84}" y="20" font-size="13" font-weight="600" fill="var(--text)">${t('g_out')}</text>`;
+  h+=L(cx+9,cy-104,330,70,t('g_strip'));
+  const [qx,qy]=P(101,-25);h+=L(qx.toFixed(1),qy.toFixed(1),330,128,t('g_channel'));
+  const [ix,iy]=P(78,30);h+=L(ix.toFixed(1),iy.toFixed(1),330,196,t('g_impeller'));
+  return `<figure class="gfig">${h}</svg><figcaption>${t('g_spiral')}</figcaption></figure>`;
+}
+function diagCurve(){
+  const X=q=>60+q*420,Y=p=>240-p*200,pb=q=>1-0.25*q-0.75*q*q;
+  let h=`<svg viewBox="0 0 520 280" role="img" aria-label="${t('g_curveCap')}">`;
+  h+=`<line x1="60" y1="240" x2="490" y2="240" stroke="var(--border-strong)"/><line x1="60" y1="240" x2="60" y2="24" stroke="var(--border-strong)"/>`;
+  h+=`<text x="490" y="262" text-anchor="end" font-size="12" fill="var(--text-2)">${t('g_flow')} →</text><text x="66" y="22" font-size="12" fill="var(--text-2)">↑ ${t('g_press')}</text>`;
+  const pm=0.72;h+=`<line x1="60" x2="490" y1="${Y(pm)}" y2="${Y(pm)}" stroke="var(--muted)" stroke-dasharray="5 4"/><text x="66" y="${Y(pm)+16}" font-size="11.5" fill="var(--text-2)">${t('g_pmax')}</text>`;
+  let d='';for(let i=0;i<=50;i++){const q=i/50;d+=(i?'L':'M')+X(q).toFixed(1)+' '+Y(Math.max(pb(q),0)).toFixed(1);}
+  h+=`<path d="${d}" fill="none" stroke="var(--s1)" stroke-width="3"/><text x="${X(0.02)}" y="${Y(pb(0.02))+22}" font-size="12" font-weight="700" fill="var(--text)">${t('g_bc')}</text>`;
+  [[2.6,'var(--s2)','A',t('g_narrow')],[0.6,'var(--s3)','B',t('g_wide')]].forEach(([k,c,lb,nm])=>{
+    let d2='';for(let i=0;i<=60;i++){const q=i/60*1.05,p=k*q*q;if(p>1.08)break;d2+=(i?'L':'M')+X(q).toFixed(1)+' '+Y(p).toFixed(1);}
+    const a=0.75+k,q0=(-0.25+Math.sqrt(0.0625+4*a))/(2*a),p0=k*q0*q0;
+    const qe=Math.min(1.05,Math.sqrt(1.05/k));
+    h+=`<path d="${d2}" fill="none" stroke="${c}" stroke-width="2.5"/><text x="${X(qe)-6}" y="${Y(k*qe*qe)-8}" text-anchor="end" font-size="12" font-weight="600" fill="var(--text-2)">${nm}</text>`;
+    h+=`<circle cx="${X(q0)}" cy="${Y(p0)}" r="12" fill="${c}" opacity=".15"/><circle cx="${X(q0)}" cy="${Y(p0)}" r="6.5" fill="var(--text)" stroke="var(--surface-2)" stroke-width="2.5"/><text x="${X(q0)+12}" y="${Y(p0)-10}" font-size="14" font-weight="800" fill="var(--text)">${lb}</text>`;
+    h+=`<line x1="${X(q0)}" x2="${X(q0)}" y1="${Y(p0)}" y2="240" stroke="var(--text)" stroke-dasharray="2 3" opacity=".35"/>`;
+  });
+  return `<figure class="gfig">${h}</svg><figcaption>${t('g_curveCap')}</figcaption></figure>`;
+}
+function diagKnife(){
+  const T=[215,140],d=[0.5,0.866],n=[-0.866,0.5],L=(220-140)/0.866,I=[T[0]+d[0]*L,220];
+  const pt=(base,dd,k,nn,w)=>[base[0]+dd[0]*k+nn[0]*w,base[1]+dd[1]*k+nn[1]*w];
+  const f=a=>a.map(v=>v.toFixed(1)).join(',');
+  let h=`<svg viewBox="0 0 560 270" role="img" aria-label="${t('g_knifeCap')}"><defs><marker id="ahK" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--text-2)"/></marker>
+    <linearGradient id="jgK" x1="${T[0]}" y1="${T[1]}" x2="${I[0]}" y2="${I[1]}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="var(--s2)" stop-opacity=".75"/><stop offset="1" stop-color="var(--s2)" stop-opacity=".15"/></linearGradient></defs>`;
+  // surface + water film
+  h+=`<rect x="20" y="220" width="520" height="14" fill="var(--surface-3)"/><line x1="20" y1="220" x2="540" y2="220" stroke="var(--border-strong)" stroke-width="2"/>`;
+  let w='M'+(I[0]+8)+' 220';for(let x=I[0]+8;x<=540;x+=12){w+=` Q ${x+6} ${211} ${x+12} 214`;}w+=' L540 220 Z';
+  h+=`<path d="${w}" fill="var(--s1)" opacity=".55"/>`;
+  h+=`<text x="470" y="204" text-anchor="middle" font-size="12" font-weight="600" fill="var(--text)">${t('g_water')}</text><text x="110" y="212" text-anchor="middle" font-size="12" fill="var(--text-2)">${t('g_dry')}</text>`;
+  h+=`<line x1="470" y1="254" x2="370" y2="254" stroke="var(--text-2)" stroke-width="2" marker-end="url(#ahK)"/><text x="480" y="258" font-size="12" fill="var(--text-2)">${t('g_dir')}</text>`;
+  // knife body
+  h+=`<path d="M95 40 Q 95 25 110 25 L 185 25 Q 205 25 208 45 L ${T[0]+3} ${T[1]-4} L ${T[0]-5} ${T[1]+3} L 120 105 Q 95 100 95 80 Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>`;
+  h+=`<text x="148" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="var(--text)">${t('g_plenum')}</text>`;
+  // jet
+  h+=`<polygon points="${f(pt(T,d,0,n,-2.5))} ${f(pt(T,d,0,n,2.5))} ${f(pt(T,d,L,n,17))} ${f(pt(T,d,L,n,-17))}" fill="url(#jgK)"/>`;
+  h+=`<polygon points="${f(pt(T,d,0,n,-2.5))} ${f(pt(T,d,0,n,2.5))} ${f(pt(T,d,26,n,1.5))} ${f(pt(T,d,26,n,-1.5))}" fill="var(--s2)"/>`;
+  // deflected flow
+  h+=`<path d="M${I[0]+6} 214 Q ${I[0]+40} 206 ${I[0]+90} 208" fill="none" stroke="var(--s2)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#ahK)"/>`;
+  // labels jet
+  const c1=[238,132],c2=[312,152];
+  h+=`<text x="${c1[0].toFixed(0)}" y="${c1[1].toFixed(0)}" font-size="12" font-weight="600" fill="var(--text)">${t('g_core')}</text>`;
+  h+=`<text x="${c2[0].toFixed(0)}" y="${c2[1].toFixed(0)}" font-size="12" fill="var(--text-2)">${t('g_spread')}</text>`;
+  // distance x
+  const a1=pt(T,d,0,n,22),a2=pt(T,d,L-6,n,22),am=pt(T,d,L/2,n,34);
+  h+=`<line x1="${a1[0].toFixed(1)}" y1="${a1[1].toFixed(1)}" x2="${a2[0].toFixed(1)}" y2="${a2[1].toFixed(1)}" stroke="var(--muted)" stroke-width="1.2" marker-start="url(#ahK)" marker-end="url(#ahK)"/><text x="${am[0].toFixed(0)}" y="${am[1].toFixed(0)}" text-anchor="end" font-size="12" fill="var(--text-2)">${t('g_dist')}</text>`;
+  // angle arc
+  const r=34,v1=[I[0],I[1]-r],v2=[I[0]-d[0]*r,I[1]-d[1]*r];
+  h+=`<line x1="${I[0]}" y1="${I[1]}" x2="${I[0]}" y2="${I[1]-48}" stroke="var(--muted)" stroke-dasharray="3 3"/><path d="M${v1[0].toFixed(1)} ${v1[1].toFixed(1)} A ${r} ${r} 0 0 0 ${v2[0].toFixed(1)} ${v2[1].toFixed(1)}" fill="none" stroke="var(--text-2)" stroke-width="1.5"/><text x="${I[0]+6}" y="${I[1]-52}" font-size="12" font-weight="600" fill="var(--text)">${t('g_angle')}</text>`;
+  // zoom of slot gap
+  h+=`<line x1="${T[0]+4}" y1="${T[1]-6}" x2="330" y2="88" stroke="var(--muted)" stroke-dasharray="3 3"/><circle cx="370" cy="70" r="44" fill="var(--surface)" stroke="var(--border-strong)"/>
+    <path d="M340 40 L 372 78 L 366 84 L 334 48 Z" fill="var(--accent-soft)" stroke="var(--accent)"/><path d="M352 30 L 384 70 L 378 74 L 346 36 Z" fill="var(--accent-soft)" stroke="var(--accent)" transform="translate(16,-4)"/>
+    <line x1="374" y1="82" x2="398" y2="104" stroke="var(--s2)" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <text x="420" y="74" font-size="12.5" font-weight="700" fill="var(--text)">${t('g_gap')}</text>`;
+  return `<figure class="gfig">${h}</svg><figcaption>${t('g_knifeCap')}</figcaption></figure>`;
+}
+function sensTable(){
+  const m=BYID[S.model],run=S2=>{const B2=makeBlower(m,S2.freq);const o=solve(B2,S2);return okOP(o)?o:null;};
+  const base=run(S);
+  if(!base) return `<div class="co warn">${t('ex_none')}</div>`;
+  const fmx=LABELS[m.id]?60:50,fAlt=S.freq>=45?S.freq-10:Math.min(S.freq+10,fmx);
+  const V=[['s_base',S],['v_gapUp',{...S,kG:S.kG*1.2}],['v_gapDn',{...S,kG:S.kG*0.8}],['v_len',{...S,kL:S.kL*1.2}],['v_n',{...S,nK:S.nK+1}],['v_hot',{...S,hT:S.hT+50}],['v_d2',{...S,D2:S.D2*0.75}],['v_l2',{...S,L2:S.L2*2}],['v_x',{...S,kX:S.kX*2}],['v_f',{...S,freq:fAlt}]];
+  const cols=[['Qn','cFlow',0,'Nm³/h',1],['pB','cP',0,'mbar',1],['vj','cV',0,'m/s',1],['vx','dVx',0,'m/s',1],['Tk','sideT',0,'°C',0],['Preq','cH',1,'kW',1],['util','colL',0,'%',0]];
+  const val=(o,k)=>k==='Tk'?o.Tk-273.15:k==='Preq'?o.Preq/1000:k==='util'?o.util*100:o[k];
+  let h=`<div class="tscroll" style="max-height:none;border-radius:12px;border:1px solid var(--border)"><table class="sens"><thead><tr><th>${t('s_change')}</th>${cols.map(c=>`<th class="n">${t(c[1])}<br><span class="muted" style="font-weight:500">${c[3]}</span></th>`).join('')}</tr></thead><tbody>`;
+  V.forEach(([k,S2],i)=>{
+    const o=i?run(S2):base,lab=t(k,{f:fAlt});
+    h+=`<tr class="${i?'':'base'}"><td>${lab}</td>`;
+    if(!o){h+=`<td colspan="${cols.length}" class="crit">${t('stOut')}</td></tr>`;return;}
+    cols.forEach(([ck,,dd,,rel])=>{
+      const v=val(o,ck),b=val(base,ck);let sm='';
+      if(i){const dlt=rel?(b?((v-b)/b*100):0):(v-b);
+        if(Math.abs(dlt)<0.5) sm=`<small>–</small>`;
+        else sm=`<small class="${dlt>0?'up':'dn'}">${dlt>0?'▲':'▼'} ${dlt>0?'+':'−'}${fmt(Math.abs(dlt),0)}${rel?'%':(ck==='Tk'?' °C':'')}</small>`;}
+      const crit=ck==='util'&&v>100?' crit':'';
+      h+=`<td class="n${crit}"><b>${fmt(v,dd)}</b>${sm}</td>`;
+    });
+    h+='</tr>';
+  });
+  return h+`</tbody></table></div><div class="gnote">${t('s_note')}</div>`;
+}
+function exampleBlock(){
+  const o=OP;if(!okOP(o)) return `<div class="co warn">${t('ex_none')}</div>`;
+  return `<div class="example">`+t('ex_tpl',{m:B.m.id,f:S.freq,qin:fmt(o.Qin,0),qn:fmt(o.Qn,0),pB:fmt(o.pB,0),pkp:fmt(o.dpK/o.dp*100,0),pk:fmt(o.dpK/100,0),tb:fmt(o.Tb-273.15,0),preq:fmt(o.Preq/1000,1),th:fmt(o.Th-273.15,0),tk:fmt(o.Tk-273.15,0),qhot:fmt(o.Qhot,0),vj:fmt(o.vj,0),x:fmt(S.kX,0),vx:fmt(o.vx,0),tx:fmt(o.Tx-273.15,0),util:fmt(o.util*100,0)})+`</div>`;
+}
+function renderGuide(){
+  const G=GUIDE[LANG]||GUIDE.tr;
+  const fill=html=>html.replace('{{DIAG_BLOWER}}',diagBlower()).replace('{{DIAG_CURVE}}',diagCurve()).replace('{{DIAG_KNIFE}}',diagKnife()).replace('{{SENS}}',sensTable()).replace('{{EXAMPLE}}',exampleBlock());
+  $('#gBody').innerHTML=G.map(([id,icon,title,html],i)=>`<section class="card gsec" id="g-${id}"><h2><span class="ico">${ic(icon)}</span>${title}<span class="no">${String(i).padStart(2,'0')}</span></h2>${fill(html)}</section>`).join('');
+  $('#gToc').innerHTML=`<div class="th">${t('toc')}</div>`+G.map(([id,icon,title])=>`<a href="#g-${id}" data-g="${id}">${ic(icon)}<span>${title}</span></a>`).join('');
+  const words=$('#gBody').textContent.split(/\s+/).length;
+  $('#gRead').textContent=t('readTime',{n:Math.max(1,Math.round(words/200))});
+  syncToc();
+}
+function syncToc(){
+  if(VIEW!=='guide')return;
+  let cur=null;document.querySelectorAll('#gBody .gsec').forEach(el=>{if(el.getBoundingClientRect().top<140)cur=el.id.slice(2);});
+  if(!cur){const f=document.querySelector('#gBody .gsec');cur=f&&f.id.slice(2);}
+  document.querySelectorAll('#gToc a').forEach(a=>a.classList.toggle('on',a.dataset.g===cur));
+}
+$('#gToc').addEventListener('click',e=>{const a=e.target.closest('a[data-g]');if(!a)return;e.preventDefault();document.getElementById('g-'+a.dataset.g).scrollIntoView({behavior:'smooth',block:'start'});});
+addEventListener('scroll',syncToc,{passive:true});
+
+
+/* ======================= BLOWER SEÇİCİ ======================= */
+const FF=[['kG','f_kG','mm',0.05],['kL','f_kL','mm',10],['nK','f_nK','u_pcs',1],['kX','f_kX','mm',5],['hP','f_hP','kW',0.5],['hT','f_hT','°C',5]];
+let F={kG:1,kL:500,nK:1,kX:50,hP:9,hT:200,ser:['TS','MS','TD']},fSort='score',fTimer;
+try{const v=JSON.parse(localStorage.getItem('blowerAKfind')||'null');if(v)F={...F,...v};else FF.forEach(([k])=>F[k]=S[k]);}catch(e){}
+const saveF=()=>{try{localStorage.setItem('blowerAKfind',JSON.stringify(F));}catch(e){}};
+function renderFinderInputs(){
+  $('#fIn').innerHTML=`<div class="card"><div class="chd" style="padding:0 0 6px"><span class="ico">${ic('find')}</span><h3>${t('fIn')}</h3></div>
+    <div class="grid2">${FF.map(([k,l,u,st])=>`<label class="field"><span>${t(l)}</span><div class="inp"><input type="number" data-f="${k}" step="${st}" value="${F[k]}"><em>${uT(u)}</em></div></label>`).join('')}</div>
+    <div class="area"><span>${t('fArea')}</span><b id="fArea"></b></div>
+    <div class="field" style="margin-top:12px"><span>${t('fSer')}</span><div class="chips" id="fSer">${['TS','MS','TD'].map(x=>`<button class="chip ${F.ser.includes(x)?'on':''}" data-s="${x}">${x}</button>`).join('')}</div></div>
+    <button class="ghost" id="fUse" style="margin-top:14px">${ic('calc')}<span>${t('fUse')}</span></button>
+    <div class="note">${t('fNote')}</div></div>`;
+}
+$('#fIn').addEventListener('input',e=>{const el=e.target.closest('[data-f]');if(!el)return;const v=parseFloat(el.value);if(!isFinite(v)||v<=0)return;F[el.dataset.f]=v;saveF();clearTimeout(fTimer);fTimer=setTimeout(renderFinder,120);});
+$('#fIn').addEventListener('click',e=>{
+  const c=e.target.closest('#fSer [data-s]');if(c){const x=c.dataset.s;F.ser=F.ser.includes(x)?F.ser.filter(y=>y!==x):[...F.ser,x];if(!F.ser.length)F.ser=[x];saveF();renderFinderInputs();renderFinder();return;}
+  if(e.target.closest('#fUse')){FF.forEach(([k])=>F[k]=S[k]);saveF();renderFinderInputs();renderFinder();}
+});
+function finderRows(){
+  const S2={...S,kG:F.kG,kL:F.kL,nK:Math.max(1,Math.round(F.nK)),kX:F.kX,hP:F.hP,hT:F.hT};
+  const all=MODELS.filter(m=>F.ser.includes(m.ser)&&baseCurve(m)).map(m=>{const B2=makeBlower(m,50),o=solve(B2,S2);return {m,B:B2,o};});
+  const ok=all.filter(r=>okOP(r.o)&&!r.o.over),over=all.filter(r=>okOP(r.o)&&r.o.over),out=all.filter(r=>!okOP(r.o));
+  if(ok.length){
+    const vmax=Math.max(...ok.map(r=>r.o.vx)),kmin=Math.min(...ok.map(r=>r.B.kw));
+    ok.forEach(r=>{const o=r.o,u=o.util;
+      const sMot=u<0.6?0.5+u/0.6*0.5:u<=0.9?1:1-(u-0.9)/0.1*0.8;
+      const hOk=o.Preq<=F.hP*1000+1,sHeat=hOk?1:Math.max(0,Math.min(1,(o.Th-o.Tb)/Math.max(o.Tt-o.Tb,1)));
+      r.hOk=hOk;r.score=45*o.vx/vmax+25*sMot+20*sHeat+10*kmin/r.B.kw;r.key=(hOk?1000:0)+r.score;});
+  }
+  return {all,ok,over,out,S2};
+}
+function renderFinder(){
+  if(VIEW!=='find')return;
+  const area=F.kG*F.kL*Math.max(1,Math.round(F.nK));
+  const fa=$('#fArea');if(fa)fa.textContent=fmt(area,0)+' mm²';
+  const {all,ok,over,out}=finderRows();
+  const sorters={score:(a,b)=>b.key-a.key,vx:(a,b)=>b.o.vx-a.o.vx,q:(a,b)=>b.o.Qn-a.o.Qn,kw:(a,b)=>a.B.kw-b.B.kw||b.score-a.score};
+  const ranked=ok.slice().sort(sorters.score);
+  const list=ok.slice().sort(sorters[fSort]);
+  let h=`<div class="fsum">${[['scan','',all.length,'fsN'],['check','good',ok.length,'fsOk'],['alert','warn',over.length,'fsOver'],['x','gray',out.length,'fsOut']].map(([i,c,v,k])=>`<div class="card"><span class="ico ${c}">${ic(i)}</span><div><b>${v}</b><span>${t(k)}</span></div></div>`).join('')}</div>`;
+  if(!ok.length){h+=`<div class="card fnone"><span class="ico warn">${ic('alert')}</span><div>${t('fNone',{a:fmt(area,0)})}</div></div>`;}
+  else{
+    h+=`<div class="sectitle" style="margin:0 0 12px"><span class="ico">${ic('target')}</span><span>${t('fTop')}</span></div><div class="pod">`;
+    ranked.slice(0,3).forEach((r,i)=>{const o=r.o,m=r.m,u=o.util*100;
+      h+=`<div class="card pcard3 ${i?'':'first'}"><span class="rank">${t('rankN',{n:i+1})}${i?'':' · '+t('best')}</span>
+        <div class="stage" data-zoom="${PHOTOS[m.ser][0][0]}" data-cap="${m.name}"><img src="${IMG[PHOTOS[m.ser][0][0]]}" alt="${m.name}"><span class="tag">${m.ser}</span></div>
+        <div class="pb"><div class="nm"><b>${m.id}</b><span class="muted" style="font-size:12.5px">${fmt(r.B.kw,2)} kW</span></div>
+        <div class="tags">${OWN.includes(m.id)?`<span class="badge own">${t('own')}</span>`:''}<span class="pill ${r.hOk?'ok':'mid'}">${r.hOk?t('heatOk'):t('heatLow',{t:fmt(o.Tk-273.15,0)})}</span></div>
+        <div class="sc"><span class="num">${fmt(r.score,0)}<small>/100</small></span><span class="sbar"><i style="width:${r.score}%"></i></span></div>
+        <div class="mg"><div>${t('dVx')}<b>${fmt(o.vx,0)} m/s</b></div><div>${t('cV')}<b>${fmt(o.vj,0)} m/s</b></div><div>${t('cFlow')}<b>${fmt(o.Qn,0)} Nm³/h</b></div>
+          <div>${t('cP')}<b>${fmt(o.pB,0)} mbar</b></div><div>${t('colL')}<b>${pct(fmt(u,0))}</b></div><div>${t('sideT')}<b>${fmt(o.Tk-273.15,0)} °C</b></div></div>
+        <button class="btn" data-open="${m.id}">${ic('calc')}${t('fOpen')} →</button></div></div>`;});
+    h+=`</div><div class="gnote" style="margin:-6px 0 18px">${t('fScoreH')}</div>`;
+    h+=`<div class="card"><div class="toolbar"><b>${t('fAll')} (${ok.length})</b><span class="muted" style="margin-left:auto;font-size:12.5px">${t('fSort')}:</span><div class="chips" id="fSortC">${[['score','sortScore'],['vx','sortVx'],['q','sortQ'],['kw','sortKw']].map(([k,l])=>`<button class="chip ${fSort===k?'on':''}" data-sort="${k}">${t(l)}</button>`).join('')}</div></div>
+      <div class="tscroll" style="max-height:none"><table class="ftable"><thead><tr><th>#</th><th>${t('colModel')}</th><th class="n">${t('colKw')}</th><th class="n">${t('dVx')}<br><span class="muted">m/s</span></th><th class="n">${t('cFlow')}<br><span class="muted">Nm³/h</span></th><th class="n">${t('cP')}<br><span class="muted">mbar</span></th><th class="n">${t('colL')}</th><th class="n">${t('sideT')}</th><th class="n">${t('fScore')}</th><th></th></tr></thead><tbody>`;
+    list.forEach(r=>{const o=r.o,u=o.util*100,rank=ranked.indexOf(r)+1,uc=u>90?'w':u>=60?'g':'';
+      h+=`<tr class="${OWN.includes(r.m.id)?'sel':''}"><td><b>${rank}</b></td><td style="white-space:nowrap">${thumb(r.m)}<b>${r.m.id}</b> ${OWN.includes(r.m.id)?`<span class="badge own">${t('own')}</span>`:''}</td>
+        <td class="n">${fmt(r.B.kw,2)}</td><td class="n"><b>${fmt(o.vx,0)}</b></td><td class="n">${fmt(o.Qn,0)}</td><td class="n">${fmt(o.pB,0)}</td>
+        <td class="n"><div class="ub"><span>${pct(fmt(u,0))}</span><span class="sbar"><i class="${uc}" style="width:${Math.min(u,100)}%"></i></span></div></td>
+        <td class="n" style="${r.hOk?'':'color:var(--warn)'}">${fmt(o.Tk-273.15,0)} °C</td>
+        <td class="n"><div class="ub"><b>${fmt(r.score,0)}</b><span class="sbar"><i style="width:${r.score}%"></i></span></div></td>
+        <td><button class="btn sm ghost2" data-open="${r.m.id}" title="${t('fOpen')}" aria-label="${t('fOpen')}">→</button></td></tr>`;});
+    h+=`</tbody></table></div></div>`;
+  }
+  const bad=[...over.map(r=>[r.m.id,t('rOver',{u:fmt(r.o.util*100,0)})]),...out.map(r=>[r.m.id,t('rOut')])];
+  if(bad.length) h+=`<details class="card fbad" style="margin-top:16px"><summary><b>${t('fBad',{n:bad.length})}</b></summary><div class="list">${bad.map(([id,why])=>`<div><b>${id}</b><span>${why}</span></div>`).join('')}</div></details>`;
+  $('#fRes').innerHTML=h;
+}
+$('#fRes').addEventListener('click',e=>{
+  const so=e.target.closest('[data-sort]');if(so){fSort=so.dataset.sort;renderFinder();return;}
+  const op=e.target.closest('[data-open]');if(op){S.model=op.dataset.open;S.freq=50;FF.forEach(([k])=>S[k]=k==='nK'?Math.max(1,Math.round(F[k])):F[k]);applyStatic();update();setView('calc');}
+});
+
 /* ======================= OLAYLAR ======================= */
 function setView(v){
   VIEW=v;try{localStorage.setItem('blowerAKtab',v);}catch(e){}
   document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
   document.querySelectorAll('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));
-  if(v==='scan')renderScan(); if(v==='calc')drawChart();
+  if(v==='scan')renderScan(); if(v==='calc')drawChart(); if(v==='guide')renderGuide(); if(v==='find')renderFinder();
   placeOpbar();
   window.scrollTo({top:0});
 }
